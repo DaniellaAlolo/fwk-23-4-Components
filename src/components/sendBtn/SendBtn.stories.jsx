@@ -1,7 +1,7 @@
 import SendBtn from "./SendBtn";
 
 export default {
-    title:'component/sendBtn',
+    title:'Component/SendBtn',
     component:SendBtn
 };
 
