@@ -1,5 +1,7 @@
+import styles from "./ToDoBoard.module.css";
+
 const TasksAtom = () => {
-    return ( <div className="tasks">Tasks</div> );
+    return ( <div className={styles.tasks}>Tasks</div> );
 }
  
 export default TasksAtom;
