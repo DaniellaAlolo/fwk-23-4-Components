@@ -1,0 +1,12 @@
+import styles from "./chat.module.css";
+import { BsArrowUp } from "react-icons/bs";
+
+const SendBtn = () => {
+    return (
+        <button className={styles.sendBtn}>
+            <BsArrowUp color="white" size={20}/>
+        </button>
+    );
+};
+
+export default SendBtn;
