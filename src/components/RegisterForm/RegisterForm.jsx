@@ -1,9 +1,9 @@
-import styles from "./InputForm.module.css";
+import styles from "./RegisterForm.module.css";
 import NameAtom from "./NameAtom";
 import EmailAtom from "./EmailAtom";
 import PasswordAtom from "./PasswordAtom";
 
-const InputForm = () => {
+const RegisterForm = () => {
   return (
     <>
       <h2 className={styles.title}>Register</h2>
@@ -14,4 +14,4 @@ const InputForm = () => {
   );
 };
 
-export default InputForm;
+export default RegisterForm;

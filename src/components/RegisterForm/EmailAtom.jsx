@@ -1,4 +1,4 @@
-import styles from "./InputForm.module.css";
+import styles from "./RegisterForm.module.css";
 
 const EmailAtom = () => {
   return (

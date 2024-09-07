@@ -1,7 +1,7 @@
 import NameAtom from "./NameAtom";
 
 export default {
-  title: "Component/InputForm/NameAtom",
+  title: "Component/RegisterForm/NameAtom",
   component: NameAtom,
 };
 

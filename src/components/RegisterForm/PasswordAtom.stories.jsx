@@ -1,7 +1,7 @@
 import PasswordAtom from "./PasswordAtom";
 
 export default {
-  title: "Component/InputForm/PassworAtom",
+  title: "Component/RegisterForm/PassworAtom",
   component: PasswordAtom,
 };
 

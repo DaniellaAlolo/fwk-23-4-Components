@@ -1,7 +1,7 @@
 import EmailAtom from "./EmailAtom";
 
 export default {
-  title: "Component/InputForm/EmailAtom",
+  title: "Component/RegisterForm/EmailAtom",
   component: EmailAtom,
 };
 
