@@ -35,3 +35,26 @@
     box-sizing: border-box;
     transition: border-color 0.2s ease-in-out;
 }
+
+
+.registerBtn {
+    background-color: rgb(90, 88, 88);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
+.registerBtn:hover {
+    background-color: rgb(46, 44, 44);
+
+}
