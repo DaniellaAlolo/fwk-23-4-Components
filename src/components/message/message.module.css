@@ -1,26 +1,28 @@
 .messageContainer {
-    display: flex;
-    flex-direction: column;
-    width: 40rem;
-    margin-bottom: 10px;
-    background-color: var(--lightGrey);
-    border: 1px solid black;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgb(188, 188, 188);
+  box-shadow: rgba(125, 125, 125, 0.197) 0px 0px 10px 2px;
 }
 .messageWrapper{
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: center;
 }
 .message {
-    padding: 10px;
-    border-radius: 8px;
-    margin: 5px;
     word-wrap: break-word;
+    margin:0px 10px;
+    padding: 10px;
 }
 .aiAvatar {
     border-radius: 100%;
-    background-color: rgb(78, 3, 255);
+    background-color: rgb(67, 67, 67);
     width: 3rem;
     height: 3rem;
     display: flex;
