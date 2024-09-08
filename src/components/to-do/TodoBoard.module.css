@@ -16,3 +16,7 @@
     width:20rem;
     border-radius: 8px;
 }
+.task{
+    background-color: red;
+    width: 15rem;height: 15rem;
+}

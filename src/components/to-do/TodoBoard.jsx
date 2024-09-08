@@ -1,12 +1,12 @@
 import styles from "./ToDoBoard.module.css";
-import TasksAtom from "./TasksAtom";
+import TasksToDoAtom from "./TasksToDoAtom";
 import DoingAtom from "./DoingAtom";
 import DoneAtom from "./DoneAtom";
 
 const TodoBoard = () => {
     return (
         <div className={styles.toDoBoard}>
-            <TasksAtom />
+            <TasksToDoAtom />
             <DoingAtom />
             <DoneAtom />
         </div>
