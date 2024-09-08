@@ -1,0 +1,19 @@
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin-bottom: 10px;
+    background-color: var(--lightGrey);
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  .message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 5px 0;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
