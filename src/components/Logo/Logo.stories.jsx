@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from './logo';
 
 export default {
-  title: 'Components/Logo',
+  title: 'Component/Logo',
   component: Logo,
 };
 
