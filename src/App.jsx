@@ -1,10 +1,8 @@
-import Message from './components/message/Message';
-import './index.css';
+import Message from "./components/message/Message";
+import "./index.css";
 
 const App = () => {
-  return (
-    <Message />
-  );
+  return <Message />;
 };
 
 export default App;
