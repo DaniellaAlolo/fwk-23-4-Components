@@ -7,7 +7,7 @@ export { default as SettingsBtn } from './components/SettingsBtn/SettingsBtn';
 export { default as Sidebar } from './components/Sidebar/Sidebar';
 export { default as Chat } from './components/chat/Chat';
 export { default as Footer } from './components/footer/Footer';
-export { default as InputForm } from './components/inputFormPromts/InputForm';
+export { default as InputForm } from './components/inputFormPrompts/InputForm';
 export { default as Message } from './components/message/Message';
 export { default as Modal } from './components/modal/Modal';
 export { default as TodoBoard } from './components/to-do/TodoBoard';
