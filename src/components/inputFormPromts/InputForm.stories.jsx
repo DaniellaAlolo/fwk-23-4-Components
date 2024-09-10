@@ -2,7 +2,7 @@ import React from 'react';
 import InputForm from './InputForm';
 
 export default {
-    title: 'Components/InputForm',
+    title: 'Component/InputForm',
     component: InputForm,
 };
 
