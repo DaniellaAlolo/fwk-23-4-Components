@@ -21,6 +21,6 @@ npm run storybook
 ## Frontend-repo
 > Det finns ett frontend-repo som använder detta komponentbibliotek. Du kan se hur komponenterna används och få mer kontext:
 
-- Frontend-repo:(https://github.com/sarahthebest/fwk-23-4-frontend)
+- [Frontend-repo](https://github.com/sarahthebest/fwk-23-4-frontend)
 
 
