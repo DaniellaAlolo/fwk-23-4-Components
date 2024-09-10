@@ -1,8 +1,20 @@
 {
   "name": "fwk-23-4-components",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist" 
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
