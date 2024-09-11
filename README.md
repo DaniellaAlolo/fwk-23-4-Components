@@ -2,7 +2,7 @@
 
 > Components for the Ai-assistan app by group 4
 
-## Innehåll
+## Content
 
 - [TTFHW](#TTFHW)
 - [Frontend-repo](#frontend-repo)
@@ -18,9 +18,9 @@ npm install
 code .
 npm run storybook
 ```
+
 ## Frontend-repo
-> Det finns ett frontend-repo som använder detta komponentbibliotek. Du kan se hur komponenterna används och få mer kontext:
+
+> There is a frontend repository that uses this component library. You can see how the components are used and get more context:
 
 - [Frontend-repo](https://github.com/sarahthebest/fwk-23-4-frontend)
-
-
