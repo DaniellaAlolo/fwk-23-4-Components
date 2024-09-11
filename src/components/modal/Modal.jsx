@@ -35,13 +35,13 @@ const Modal = () => {
             <button className={styles.modalOpenBtn}>Open</button>
             <dialog className={styles.modal} ref={dialogRef}>
                 <div className={styles.modalTab}>
+                <h3 className={styles.modalHeader}>Modal Header</h3>
                     <form method="dialog">
                         <button className={styles.modalCloseBtn}>
-                            <IoCloseOutline size={20} />
+                            <IoCloseOutline size={24} />
                         </button>
                     </form>
                 </div>
-                <h3 className={styles.modalHeader}>Modal Header</h3>
                 <p className={styles.dialogContent}>Modal body</p>
             </dialog>
         </>

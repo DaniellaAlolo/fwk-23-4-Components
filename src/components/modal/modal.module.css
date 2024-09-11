@@ -14,11 +14,13 @@
 }
 .modalTab {
     width: 100%;
-    height: fit-content;
+    height: 40px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
-.dialogContent {
+.modalHeader {
+    padding: 15px;
 }
 .modalOpenBtn {
     background: rgb(94, 199, 94);
