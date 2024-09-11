@@ -6,10 +6,13 @@ const DoneAtom = () => {
     const doneTasks = dummyTasks.filter(task => task.status === 'done');
 
     return (
-        <div className={styles.done}>
-            {doneTasks.map(task => (
-                <TaskAtom key={task.id} task={task} />
-            ))}
+        <div className={styles.doneWrapper}>
+            <h2>Done</h2>
+            <div className={styles.done}>
+                {doneTasks.map((task) => (
+                    <TaskAtom key={task.id} task={task} />
+                ))}
+            </div>
         </div>
     );
 };
