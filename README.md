@@ -1,8 +1,26 @@
-# React + Vite
+# Fwk-23-4-Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Components for the Ai-assistan app by group 4
 
-Currently, two official plugins are available:
+## Innehåll
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [TTFHW](#TTFHW)
+- [Frontend-repo](#frontend-repo)
+
+## TTFHW
+
+```bash
+cd ~
+cd ws
+git clone https://github.com/DaniellaAlolo/fwk-23-4-Components.git
+cd fwk-23-4-Components
+npm install
+code .
+npm run storybook
+```
+## Frontend-repo
+> Det finns ett frontend-repo som använder detta komponentbibliotek. Du kan se hur komponenterna används och få mer kontext:
+
+- [Frontend-repo](https://github.com/sarahthebest/fwk-23-4-frontend)
+
+
