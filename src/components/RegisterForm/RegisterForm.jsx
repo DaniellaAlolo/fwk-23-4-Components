@@ -7,11 +7,13 @@ import RegisterBtn from "./RegisterBtn";
 const RegisterForm = () => {
   return (
     <>
-      <h2 classUsername={styles.title}>RegisterForm</h2>
-      <UsernameAtom />
-      <EmailAtom />
-      <PasswordAtom />
-      <RegisterBtn />
+      <form className={styles.form}>
+        <h2 className={styles.title}>Register</h2>
+        <UsernameAtom />
+        <EmailAtom />
+        <PasswordAtom />
+        <RegisterBtn />
+      </form>
     </>
   );
 };
