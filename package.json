@@ -1,6 +1,6 @@
 {
   "name": "fwk-23-4-components",
-  "main": "dist/index.esm.js",
+  "main": "src/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "private": true,
