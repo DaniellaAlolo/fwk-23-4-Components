@@ -1,4 +1,4 @@
-import styles from "./chat.module.css";
+import styles from "./Chat.module.css";
 import SendBtn from "./SendBtn";
 
 const Chat = () => {
