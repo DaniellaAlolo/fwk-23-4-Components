@@ -1,3 +1,3 @@
-import AiAtom from "./AiAtom.jsx";
+import Message from "./Message.jsx";
 
-export { AiAtom };
+export { Message };
