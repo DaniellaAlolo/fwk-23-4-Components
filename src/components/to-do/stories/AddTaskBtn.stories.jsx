@@ -1,4 +1,4 @@
-import AddTaskBtn from "./AddTaskBtn";
+import AddTaskBtn from "../AddTaskBtn";
 
 export default {
     title:'Component/To-do Board/AddTaskBtn',

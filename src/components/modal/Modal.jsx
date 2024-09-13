@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 import styles from "./Modal.module.css";
 import { IoCloseOutline } from "react-icons/io5";
+import ModalForm from "./ModalFormAtom";
+import DropdownAtom from "./DropdownAtom";
+import RadioBtnAtom from "./RadioBtnAtom";
+import Btn from "../btn/Btn";
 
 const Modal = () => {
     const dialogRef = useRef(null);
@@ -35,14 +39,19 @@ const Modal = () => {
             <button className={styles.modalOpenBtn}>Open</button>
             <dialog className={styles.modal} ref={dialogRef}>
                 <div className={styles.modalTab}>
-                <h3 className={styles.modalHeader}>Modal Header</h3>
+                    <h3 className={styles.modalHeader}>Add new task</h3>
                     <form method="dialog">
                         <button className={styles.modalCloseBtn}>
                             <IoCloseOutline size={24} />
                         </button>
                     </form>
                 </div>
-                <p className={styles.dialogContent}>Modal body</p>
+                <div className={styles.modalBody}>
+                    <ModalForm />
+                    <DropdownAtom />
+                    <RadioBtnAtom />
+                    <Btn text="Add Task" />
+                </div>
             </dialog>
         </>
     );
