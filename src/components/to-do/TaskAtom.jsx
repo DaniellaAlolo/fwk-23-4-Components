@@ -12,7 +12,12 @@ const TaskAtom = ({ task }) => {
 
     return (
         <div className={`${styles.task} ${taskClass}`}>
+            <div className={styles.taskHeader}>
             <h2 className={styles.taskTitle}>{task.title}</h2>
+            <div className={styles.taskCategory}>
+                {task.category}
+            </div>
+            </div>
             <p>{task.description}</p>
         </div>
     );

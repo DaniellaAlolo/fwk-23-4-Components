@@ -1,10 +1,15 @@
-import styles from './Modal.module.css'
+import styles from "./Modal.module.css";
 
 const DropdownAtom = ({ category, setCategory }) => {
     return (
         <form action="">
-            <label>Choose category:</label>
-            <select value={category} onChange={(e) => setCategory(e.target.value)} name="taskCategory" id="taskCategory">
+            <label htmlFor="taskCategory">Choose category:</label>
+            <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                name="taskCategory"
+                id="taskCategory"
+            >
                 <option value="food">Food</option>
                 <option value="career">Career</option>
                 <option value="school">School</option>
@@ -13,6 +18,6 @@ const DropdownAtom = ({ category, setCategory }) => {
             </select>
         </form>
     );
-}
+};
 
 export default DropdownAtom;
