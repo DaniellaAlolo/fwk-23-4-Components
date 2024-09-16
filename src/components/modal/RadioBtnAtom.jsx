@@ -1,24 +1,25 @@
-const RadioBtnAtom = () => {
+const RadioBtnAtom = ({ status, setStatus }) => {
+    const statuses = ["To-do", "Doing", "Done"]; 
+  
     return (
-        <fieldset>
-            <legend>Task status:</legend>
-
-            <div>
-                <input type="radio" id="statusToDo" name="taskStatus" value="taskStatus" />
-                <label for="statusToDo">To-do</label>
-            </div>
-
-            <div>
-                <input type="radio" id="statusDoing" name="taskStatus" value="taskStatus" />
-                <label for="dewey">Doing</label>
-            </div>
-
-            <div>
-                <input type="radio" id="statusDone" name="taskStatus" value="taskStatus"  />
-                <label for="statusDone">Done</label>
-            </div>
-        </fieldset>
+      <fieldset>
+        <legend>Task status:</legend>
+        {statuses.map((option) => (
+          <div key={option}>
+            <input 
+              type="radio" 
+              id={`status${option}`} 
+              name="taskStatus" 
+              value={option} 
+              checked={status === option} 
+              onChange={(e) => setStatus(e.target.value)} 
+            />
+            <label htmlFor={`status${option}`}>{option}</label>
+          </div>
+        ))}
+      </fieldset>
     );
-}
-
-export default RadioBtnAtom;
+  };
+  
+  export default RadioBtnAtom;
+  

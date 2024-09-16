@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef, useState, forwardRef, useImperativeHandle } from "react";
 import styles from "./Modal.module.css";
 import { IoCloseOutline } from "react-icons/io5";
 import ModalForm from "./ModalFormAtom";
@@ -6,55 +6,50 @@ import DropdownAtom from "./DropdownAtom";
 import RadioBtnAtom from "./RadioBtnAtom";
 import Btn from "../btn/Btn";
 
-const Modal = () => {
-    const dialogRef = useRef(null);
+const Modal = forwardRef((props, ref) => {
+  const dialogRef = useRef(null);
 
-    useEffect(() => {
-        const dialog = dialogRef.current;
+  const [taskName, setTaskName] = useState("");
+  const [status, setStatus] = useState("");  
+  const [category, setCategory] = useState("");  
 
-        if (!dialog) return;
+  useImperativeHandle(ref, () => ({
+    showModal() {
+      if (dialogRef.current) {
+        dialogRef.current.showModal();
+      }
+    },
+    closeModal() {
+      if (dialogRef.current) {
+        dialogRef.current.close();
+      }
+    }
+  }));
 
-        const showModal = () => {
-            dialog.showModal();
-        };
 
-        const closeModal = () => {
-            dialog.close();
-        };
+  return (
+    <dialog className={styles.modal} ref={dialogRef}>
+      <div className={styles.modalTab}>
+        <h3 className={styles.modalHeader}>Add new task</h3>
+        <form method="dialog">
+          <button className={styles.modalCloseBtn}>
+            <IoCloseOutline size={24} />
+          </button>
+        </form>
+      </div>
+      <div className={styles.modalBody}>
+        <ModalForm taskName={taskName} setTaskName={setTaskName} />
+        <DropdownAtom category={category} setCategory={setCategory} />
+        <RadioBtnAtom status={status} setStatus={setStatus} />
+        <Btn text="Add Task"/>
 
-        const showButton = dialog.previousElementSibling;
-        const closeButton = dialog.querySelector("button");
+        {/* <Btn text="Add Task" onClick={handleTaskSubmit} /> */}
+      </div>
+    </dialog>
+  );
+});
 
-        showButton.addEventListener("click", showModal);
-        closeButton.addEventListener("click", closeModal);
-
-        return () => {
-            showButton.removeEventListener("click", showModal);
-            closeButton.removeEventListener("click", closeModal);
-        };
-    }, []);
-
-    return (
-        <>
-            <button className={styles.modalOpenBtn}>Open</button>
-            <dialog className={styles.modal} ref={dialogRef}>
-                <div className={styles.modalTab}>
-                    <h3 className={styles.modalHeader}>Add new task</h3>
-                    <form method="dialog">
-                        <button className={styles.modalCloseBtn}>
-                            <IoCloseOutline size={24} />
-                        </button>
-                    </form>
-                </div>
-                <div className={styles.modalBody}>
-                    <ModalForm />
-                    <DropdownAtom />
-                    <RadioBtnAtom />
-                    <Btn text="Add Task" />
-                </div>
-            </dialog>
-        </>
-    );
-};
+Modal.displayName = "Modal";
 
 export default Modal;
+

@@ -1,10 +1,10 @@
 import styles from './Modal.module.css'
 
-const DropdownAtom = () => {
+const DropdownAtom = ({ category, setCategory }) => {
     return (
         <form action="">
-            <label for="cars">Choose category:</label>
-            <select name="taskCategory" id="taskCategory">
+            <label>Choose category:</label>
+            <select value={category} onChange={(e) => setCategory(e.target.value)} name="taskCategory" id="taskCategory">
                 <option value="food">Food</option>
                 <option value="career">Career</option>
                 <option value="school">School</option>

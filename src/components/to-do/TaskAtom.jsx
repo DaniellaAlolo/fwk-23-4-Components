@@ -1,6 +1,4 @@
 import styles from "./ToDoBoard.module.css";
-import { MdOutlineModeEdit } from "react-icons/md";
-import { MdDeleteOutline } from "react-icons/md";
 
 const TaskAtom = ({ task }) => {
     const taskClass =
@@ -16,10 +14,6 @@ const TaskAtom = ({ task }) => {
         <div className={`${styles.task} ${taskClass}`}>
             <h2 className={styles.taskTitle}>{task.title}</h2>
             <p>{task.description}</p>
-            <div className={styles.taskControls}>
-                <button><MdOutlineModeEdit />Edit</button>
-                <button><MdDeleteOutline />Delete</button>
-            </div>
         </div>
     );
 };
