@@ -31,6 +31,8 @@
     border-radius: 9999px;
     width: 3rem;height: 3rem;
     background-color: rgb(67, 67, 67);
+    display: flex;
+    justify-content: center;
     border: none;
     transition: filter 0.3s ease, background-color 0.3s ease; 
 }
