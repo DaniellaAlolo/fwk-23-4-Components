@@ -1,9 +1,11 @@
 import { MdAdd } from "react-icons/md";
 
-const AddTaskbtn = () => {
-    return ( 
-        <button><MdAdd />Add Task</button>
-     );
-}
- 
-export default AddTaskbtn;
+const AddTaskBtn = ({ onClick }) => {
+    return (
+        <button onClick={onClick}>
+            <MdAdd /> Add Task
+        </button>
+    );
+};
+
+export default AddTaskBtn;

@@ -1,4 +1,4 @@
-import TasksToDoAtom from "./TasksToDoAtom";
+import TasksToDoAtom from "../TasksToDoAtom";
 
 export default {
     title:'Component/To-do Board/TasksToDoAtom',

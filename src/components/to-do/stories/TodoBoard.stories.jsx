@@ -1,4 +1,4 @@
-import TodoBoard from "./TodoBoard";
+import TodoBoard from "../TodoBoard";
 
 export default {
     title:'Component/To-do Board',

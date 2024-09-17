@@ -1,5 +1,6 @@
 .boardHeader {
     display: flex;
+    width: 80%;
     flex-direction: row;
     align-items: center;
     gap: 20px;
@@ -30,17 +31,6 @@
     padding: 20px;
     column-gap: 20px;
 }
-.task {
-    width: 100%;
-    height: fit-content;
-    padding: 12px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 .taskControls {
     display: flex;
     gap: 10px;
@@ -52,8 +42,31 @@ button {
     align-items: center;
     gap: 2px;
 }
+.task {
+    width: 100%;
+    height: fit-content;
+    padding: 12px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.taskHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .taskTitle {
     margin: 0;
+    font-size: 1.3rem;
+}
+.taskCategory{
+    border: solid 1px black;
+    height: fit-content;
+    padding: 4px 6px;
+    border-radius: 8px;
 }
 .taskToDo {
     background-color: #ffefb1;

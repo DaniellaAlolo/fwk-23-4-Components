@@ -1,4 +1,4 @@
-import DoneAtom from "./DoneAtom";
+import DoneAtom from "../DoneAtom";
 
 export default {
     title:'Component/To-do Board/DoneAtom',
