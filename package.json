@@ -1,17 +1,6 @@
 {
   "name": "@sarahthebest/fwk-23-4-components",
   "main": "./src/index.js",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
-    }
-  },
-  "files": [
-    "dist",
-    "src/components" 
-  ],
   "private": false,
   "version": "1.0.5",
   "scripts": {
