@@ -1,13 +1,56 @@
-.footer{
-    background-color: rgb(188, 188, 188);
-    width: 100svw;
-    height: 200px;
-    font-size: 1.4em;
-    padding: 10px;
-}
-.list{
+/* Container styling */
+.footerContainer {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Social media section */
+  .socialIcons {
     display: flex;
-    margin-top: 10px;
-    flex-direction: row;
-    gap: 20rem;
-}
+    justify-content: center;
+    gap: 1rem; /* Adjust spacing between icons */
+    flex-wrap: wrap; /* Ensure icons wrap on smaller screens */
+  }
+  
+  /* Icons button styling */
+  .socialButton {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease; /* Add hover effect */
+  }
+  
+  /* Add hover effect to scale the buttons */
+  .socialButton:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Adjust the footer's text alignment */
+  .footerText {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .socialIcons {
+      gap: 0.5rem; /* Reduce gap between icons */
+    }
+  
+    .socialButton {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem; /* Scale down icon size */
+    }
+  
+    .footerText {
+      font-size: 0.8rem; /* Adjust text size for smaller screens */
+    }
+  }
+  

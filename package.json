@@ -2,8 +2,20 @@
   "name": "@sarahthebest/fwk-23-4-components",
   "main": "./src/index.js",
   "type": "module",
+<<<<<<< HEAD
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+=======
   "private": false,
   "version": "1.0.0",
+>>>>>>> cddfbf28b5cd72ea916d30db4beced77d3d9e868
   "scripts": {
     "dev": "vite",
     "build": "vite build",
