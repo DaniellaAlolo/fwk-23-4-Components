@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './LoginForm.module.css';
 import EmailLoginAtom from './EmailLoginAtom';
 import PasswordLoginAtom from './PasswordLoginAtom';
-import LoginBtn from './LoginBtn';
+import { MdLogin } from "react-icons/md";
+import Btn from '../btn/Btn';
 import LoginSidebar from './LoginSidebar';
 
 const LoginForm = () => {
@@ -22,7 +23,7 @@ const LoginForm = () => {
           <h2 className={styles.title}>Login</h2>
           <EmailLoginAtom />
           <PasswordLoginAtom />
-          <LoginBtn />
+          <Btn text="Login" icon={<MdLogin />}  />
         </form>
         <a href="register">Don't have a account? Sign up</a>
       </div>

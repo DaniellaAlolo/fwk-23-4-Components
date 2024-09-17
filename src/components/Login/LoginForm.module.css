@@ -89,16 +89,16 @@
 .login{
   display: grid;
   padding: 0 !important;margin: 0;
-  background-color: #00006C;
-    align-items: center;
+  background-color:#c8c9c8;
+      align-items: center;
   height: 100svh;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1;
 }
 .sidebar{
   background-image: url(./assets/sidebarimg.jpg);
-  background-size: 400px;
-  background-position: bottom;
+  background-size: cover;
+  background-position: center;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -108,14 +108,10 @@
   height: 100%;
 }
 a{
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
-p{
+h1{
   padding-bottom: 40px;
-  text-align: center;
-  width: 24em;
 }
-* > p, h1{
-  color: #bfbcff;
-}
+
