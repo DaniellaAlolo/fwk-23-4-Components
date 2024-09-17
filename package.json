@@ -9,7 +9,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src/components" 
   ],
   "private": false,
   "version": "1.0.5",

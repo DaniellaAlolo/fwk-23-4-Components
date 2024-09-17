@@ -10,7 +10,10 @@ import { RegisterForm } from './components/RegisterForm';
 import { SettingsBtn } from './components/SettingsBtn/';
 import { Sidebar} from './components/Sidebar';
 import { TodoBoard } from './components/to-do';
+import { Home } from './pages/home/Home';
+import { Landing } from './pages/landing/Landing';
 
-export {Chat, Header, Footer, InputForm, Login, Message, Modal, Navbar, RegisterForm, SettingsBtn, Sidebar, TodoBoard};
+
+export {Chat, Header, Home, Landing, Footer, InputForm, Login, Message, Modal, Navbar, RegisterForm, SettingsBtn, Sidebar, TodoBoard};
 
 
