@@ -1,11 +1,8 @@
 {
-  "name": "fwk-23-4-components",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@sarahthebest/fwk-23-4-components",
+  "main": "./src/index.js",
   "type": "module",
+<<<<<<< HEAD
   "exports": {
     ".": {
       "import": "./dist/index.esm.js",
@@ -15,6 +12,10 @@
   "files": [
     "dist"
   ],
+=======
+  "private": false,
+  "version": "1.0.0",
+>>>>>>> cddfbf28b5cd72ea916d30db4beced77d3d9e868
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -29,19 +30,20 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.8.0",
+    "@chromatic-com/storybook": "^2.0.2",
     "@eslint/js": "^9.9.0",
-    "@storybook/addon-essentials": "^8.2.9",
-    "@storybook/addon-interactions": "^8.2.9",
-    "@storybook/addon-links": "^8.2.9",
-    "@storybook/addon-onboarding": "^8.2.9",
-    "@storybook/blocks": "^8.2.9",
-    "@storybook/react": "^8.2.9",
-    "@storybook/react-vite": "^8.2.9",
-    "@storybook/test": "^8.2.9",
+    "@storybook/addon-essentials": "^8.3.0",
+    "@storybook/addon-interactions": "^8.3.0",
+    "@storybook/addon-links": "^8.3.0",
+    "@storybook/addon-onboarding": "^8.3.0",
+    "@storybook/blocks": "^8.3.0",
+    "@storybook/react": "^8.3.0",
+    "@storybook/react-vite": "^8.3.0",
+    "@storybook/test": "^8.3.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -52,12 +54,15 @@
     "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.9.0",
     "prop-types": "^15.8.1",
-    "storybook": "^8.2.9",
+    "storybook": "^8.3.0",
     "vite": "^5.4.1"
   },
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
