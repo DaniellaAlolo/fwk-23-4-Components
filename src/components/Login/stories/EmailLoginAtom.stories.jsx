@@ -1,5 +1,4 @@
-import React from 'react';
-import EmailLoginAtom from './EmailLoginAtom';
+import EmailLoginAtom from '../EmailLoginAtom';
 
 export default {
   title: 'Component/LoginForm/EmailLoginAtom',  
