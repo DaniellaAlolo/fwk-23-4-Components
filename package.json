@@ -1,5 +1,5 @@
 {
-  "name": "@sarahthebest/fwk-23-4-components",
+  "name": "fwk-23-4-components",
   "main": "./src/index.js",
   "private": false,
   "version": "1.0.7",
