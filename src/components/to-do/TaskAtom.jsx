@@ -13,7 +13,7 @@ const TaskAtom = ({ task }) => {
     return (
         <div className={`${styles.task} ${taskClass}`}>
             <div className={styles.taskHeader}>
-            <h2 className={styles.taskTitle}>{task.title}</h2>
+            <h3 className={styles.taskTitle}>{task.title}</h3>
             <div className={styles.taskCategory}>
                 {task.category}
             </div>

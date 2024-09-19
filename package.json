@@ -1,6 +1,6 @@
 {
-  "name": "@sarahthebest/fwk-23-4-components",
-  "main": "dist/index.cjs.js",
+  "name": "fwk-23-4-components",
+  "main": "./src/index.js",
   "private": false,
   "version": "1.0.7",
   "scripts": {
