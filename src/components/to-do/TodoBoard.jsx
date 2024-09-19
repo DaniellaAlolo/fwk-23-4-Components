@@ -19,20 +19,11 @@ const TodoBoard = () => {
     return (
         <div className={styles.boardWrapper}>
             <div className={styles.boardHeader}>
-                <div
-                    style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center",
-                        gap: 20,
-                    }}
-                >
-                    <h1>To-Do Board</h1>
-                    <Btn icon={<MdAdd />} text="Add task" onClick={openModal} />
-                    <Modal ref={modalRef} />
-                </div>
+                <h1>To-Do Board</h1>
+                <Btn icon={<MdAdd />} text="Add task" onClick={openModal} />
+                <Modal ref={modalRef} />
                 <div className={styles.taskControls}>
-                <Btn icon={<MdOutlineModeEdit />} text="Edit tasks" onClick={openModal} />
+                    <Btn icon={<MdOutlineModeEdit />} text="Edit tasks" onClick={openModal} />
 
                 </div>
             </div>
