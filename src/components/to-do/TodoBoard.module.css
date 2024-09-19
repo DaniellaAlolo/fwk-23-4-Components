@@ -1,6 +1,6 @@
 .boardHeader {
     display: flex;
-    width: 80%;
+    width: fit-content;
     flex-direction: row;
     align-items: center;
     gap: 20px;

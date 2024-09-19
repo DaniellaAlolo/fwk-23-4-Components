@@ -4,4 +4,8 @@
     border-radius: 8px;
     padding: 6px 10px;
     border: 1px lightgray solid;
+    background-color: white;
+}
+.submitBtn:hover{
+    background-color: whitesmoke;
 }
