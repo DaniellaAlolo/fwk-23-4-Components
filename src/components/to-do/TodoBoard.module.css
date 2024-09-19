@@ -3,16 +3,23 @@
     width: fit-content;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    height: 100px;
+    gap: 10px;
+}
+.boardHeader > h1{
+    padding: 0;
+} 
+.boardWrapper{
+    padding: 20px;
 }
 .toDoBoard {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    height: 80vh;
-    width: fit-content;
+    height: 83%;
     justify-content: space-evenly;
+    gap: 14px;
 }
+
 .toDoWrapper,
 .doingWrapper,
 .doneWrapper {
@@ -20,6 +27,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .tasks,
 .doing,
 .done {
@@ -27,14 +35,18 @@
     display: grid;
     background-color: rgb(221, 221, 221);
     grid-template-columns: repeat(2, 1fr);
-    width: 26rem;
+    width: 24rem;
     padding: 20px;
-    column-gap: 20px;
+    gap: 10px;
+    border-radius: 8px;
+    overflow-y: scroll;
 }
+
 .taskControls {
     display: flex;
     gap: 10px;
 }
+
 button {
     padding: 4px;
     display: flex;
@@ -42,6 +54,7 @@ button {
     align-items: center;
     gap: 2px;
 }
+
 .task {
     width: 100%;
     height: fit-content;
@@ -53,21 +66,25 @@ button {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.taskHeader{
+
+.taskHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .taskTitle {
     margin: 0;
     font-size: 1.3rem;
 }
-.taskCategory{
+
+.taskCategory {
     border: solid 1px black;
     height: fit-content;
     padding: 4px 6px;
     border-radius: 8px;
 }
+
 .taskToDo {
     background-color: #ffefb1;
 }
@@ -78,4 +95,10 @@ button {
 
 .taskDone {
     background-color: #9cffcd;
+}
+h2{
+    background-color: rgb(221, 221, 221);
+    padding: 5px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
