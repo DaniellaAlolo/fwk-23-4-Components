@@ -8,7 +8,7 @@ export default {
 
 export const Default = () => (
   <MockLoginProvider>
-      <Login />
+      <LoginForm />
   </MockLoginProvider>
 );
 

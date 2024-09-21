@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './LoginForm.module.css';
 import EmailLoginAtom from './EmailLoginAtom';
 import PasswordLoginAtom from './PasswordLoginAtom';

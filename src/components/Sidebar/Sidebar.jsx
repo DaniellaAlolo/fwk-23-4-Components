@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSignInAlt, faTasks } from '@fortawesome/free-solid-svg-icons';  
 import styles from './Sidebar.module.css';  
