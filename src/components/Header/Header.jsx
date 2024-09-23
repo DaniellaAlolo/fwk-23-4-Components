@@ -4,9 +4,8 @@ import TitleAtom from "./TitleAtom";
 import { useState } from "react";
 import AvatarAtom from "./AvatarAtom";
 
-const Header = () => {
+const Header = ({ subtitle }) => {
   const [userName, setUserName] = useState("John Doe");
-  const [subtitle, setSubtitle] = useState("The Best Assistant Ever");
   const [avatar, setAvatar] = useState("");
   return (
     <>
@@ -21,8 +20,6 @@ const Header = () => {
           </li>
           <li className={styles.listItem}>
             <AvatarAtom avatar={avatar} />
-          </li>
-          <li className={styles.listItem}>
             <ProfileAtom userName={userName} />
           </li>
         </ul>
