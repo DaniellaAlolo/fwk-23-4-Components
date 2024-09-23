@@ -37,10 +37,72 @@
 }
 
 .icon {
-    font-size: 50px;
+    font-size: 500px;
     color: #07101a;
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.avatarImage {
+    width: 45px;
+    /* Samma som din ikon */
+    height: 45px;
+    /* Samma som din ikon */
+    border-radius: 50%;
+    /* Gör bilden rund */
+    margin-right: 10px;
+    /* Samma marginal som din ikon */
+    object-fit: cover;
+    /* Gör att bilden anpassas inuti rutan utan att bli förvrängd */
+}
+
+.avatarOption {
+    width: 45px;
+    /* Samma som din ikon */
+    height: 45px;
+    /* Samma som din ikon */
+    border-radius: 50%;
+    /* Gör bilden rund */
+    margin: 5px;
+    /* Justera marginaler om behövs */
+    cursor: pointer;
+    /* Visuellt feedback */
+}
+
+.avatarOption:hover {
+    border: 2px solid blue;
+    /* Visuellt feedback vid hover */
+}
+
+.dropdown {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* Lite padding för att separera från kanterna */
+    border-radius: 5px;
+    /* Rundade hörn */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Skugga för djup */
+}
+
+.avatarCard {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* Padding för varje kort */
+    cursor: pointer;
+    /* Visuellt feedback */
+    transition: background-color 0.2s;
+    /* Lätt övergångseffekt */
+}
+
+.avatarCard:hover {
+    background-color: #f0f0f0;
+    /* Lätt färgändring vid hover */
 }

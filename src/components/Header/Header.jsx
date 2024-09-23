@@ -19,7 +19,11 @@ const Header = ({ subtitle }) => {
             </h2>
           </li>
           <li className={styles.listItem}>
-            <AvatarAtom avatar={avatar} />
+            <AvatarAtom
+              className={styles.icon}
+              avatar={avatar}
+              onChangeAvatar={setAvatar}
+            />
             <ProfileAtom userName={userName} />
           </li>
         </ul>
