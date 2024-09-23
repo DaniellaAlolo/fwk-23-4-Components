@@ -1,23 +1,29 @@
 import styles from "./Header.module.css";
 import ProfileAtom from "./ProfileAtom";
 import TitleAtom from "./TitleAtom";
+import { useState } from "react";
+import AvatarAtom from "./AvatarAtom";
 
 const Header = () => {
+  const [userName, setUserName] = useState("John Doe");
+  const [subtitle, setSubtitle] = useState("The Best Assistant Ever");
+  const [avatar, setAvatar] = useState("");
   return (
     <>
       <div className={styles.headerContainer}>
         <ul className={styles.headerList}>
           <li className={styles.listItem}>
             <h2 className={styles.title}>
-              Header
               <span>
-                <TitleAtom />
+                <TitleAtom subtitle={subtitle} />
               </span>
             </h2>
           </li>
           <li className={styles.listItem}>
-            <ProfileAtom />
-            <span>User: John Doe</span>
+            <AvatarAtom avatar={avatar} />
+          </li>
+          <li className={styles.listItem}>
+            <ProfileAtom userName={userName} />
           </li>
         </ul>
       </div>

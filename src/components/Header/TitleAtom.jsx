@@ -1,9 +1,10 @@
 import styles from "./Header.module.css";
 
-const TitleAtom = () => {
+const TitleAtom = ({ subtitle }) => {
   return (
     <>
-      <h3 className={styles.subtitle}>The best assistant ever!</h3>
+      <h3 className={styles.subtitle} />
+      <span> {subtitle}</span>
     </>
   );
 };
