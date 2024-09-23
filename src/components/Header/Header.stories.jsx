@@ -6,13 +6,13 @@ export default {
 };
 
 export const Default = () => {
-  return <Header subtitle="The Best Assistant Ever" />;
+  return <Header subtitle="Smart Solutions for an Easier Everyday" />;
 };
 
 export const WithSubtitleExample2 = () => {
-  return <Header subtitle="Welcome to the AI Assistant" />;
+  return <Header subtitle="Your Personal Guide for Efficiency and Insight" />;
 };
 
 export const WithSubtitleExample3 = () => {
-  return <Header subtitle="Your Personal Guide" />;
+  return <Header subtitle="Tailored Help to Maximize Your Productivity" />;
 };

@@ -1,10 +1,11 @@
 import styles from "./Header.module.css";
 
-const TitleAtom = ({ subtitle }) => {
+const TitleAtom = ({ title }) => {
   return (
     <>
-      <h3 className={styles.subtitle}>{subtitle}</h3>
+      <h2 className={styles.title}>Ai Assistant</h2>
     </>
   );
 };
+
 export default TitleAtom;

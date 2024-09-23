@@ -1,79 +1,103 @@
+/* Återställning av marginal och padding */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Modern sans-serif font */
 }
 
 .headerContainer {
-    background-color: rgb(207, 207, 207);
-    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    /* En subtil gradientbakgrund */
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
-    border-bottom: 2px solid rgb(188, 188, 188);
+    border-bottom: 2px solid rgb(240, 240, 240);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.headerList {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    list-style-type: none;
-}
-
-.listItem {
+.headerLeft,
+.headerRight {
     display: flex;
     align-items: center;
 }
 
-.titel {
-    color: rgb(60, 60, 60);
-    font-family: 'Arial', sans-serif;
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    /* Placera title och subtitle vertikalt */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.headerRight {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 20px;
+    /* Avstånd mellan ikoner */
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(34, 34, 34);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px
 }
 
 .subtitle {
-    color: rgb(100, 100, 100);
+    color: rgb(120, 120, 120);
+    font-size: 16px;
     margin-top: 5px;
-    font-size: 18px;
+    font-style: italic;
+    /* Ger en lite mer subtil känsla */
+    margin-top: 0;
 }
 
 .icon {
-    font-size: 500px;
+    font-size: 30px;
     color: #07101a;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
     margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    /* Ökar storleken vid hover för en interaktiv känsla */
 }
 
 .avatarImage {
-    width: 45px;
-    /* Samma som din ikon */
-    height: 45px;
-    /* Samma som din ikon */
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    /* Gör bilden rund */
-    margin-right: 10px;
-    /* Samma marginal som din ikon */
     object-fit: cover;
-    /* Gör att bilden anpassas inuti rutan utan att bli förvrängd */
-}
-
-.avatarOption {
-    width: 45px;
-    /* Samma som din ikon */
-    height: 45px;
-    /* Samma som din ikon */
-    border-radius: 50%;
-    /* Gör bilden rund */
-    margin: 5px;
-    /* Justera marginaler om behövs */
     cursor: pointer;
-    /* Visuellt feedback */
+    transition: transform 0.3s ease;
 }
 
-.avatarOption:hover {
-    border: 2px solid blue;
-    /* Visuellt feedback vid hover */
+.avatarImage:hover {
+    transform: scale(1.1);
+    /* Ökar storleken vid hover */
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }
 
 .dropdown {
