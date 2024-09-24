@@ -1,4 +1,4 @@
-name: CI Pipeline with Storybook
+name: CI Pipeline
 
 on:
   push:
@@ -23,6 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install  # Install all the dependencies listed in package.json
+
+      - run: npm run lint
 
      # - name: Run tests
       #  run: npm test  # Run the tests defined in the project
