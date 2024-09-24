@@ -1,4 +1,4 @@
-name: CI Pipeline with Storybook
+name: CI Pipeline
 
 on:
   push:
