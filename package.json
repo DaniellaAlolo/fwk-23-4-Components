@@ -1,8 +1,16 @@
 {
-  "name": "fwk-23-4-components",
-  "main": "dist/index.cjs.js",
+  "name": "@sarahthebest/fwk-23-4-components",
+  "main": "./dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "unpkg": "dist/index.umd.js",
+  "type": "module",
+  "files": [
+    "dist",
+    "assets/fonts",
+    "README.md"
+  ],
   "private": false,
-  "version": "1.0.7",
+  "version": "2.2.3",
   "scripts": {
     "dev": "vite",
     "build": "rollup -c",
@@ -12,9 +20,11 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.25.4",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@rollup/plugin-json": "^6.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
@@ -59,13 +69,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "build": "rollup -c",
-  "module": "dist/index.es.js",
-  "unpkg": "dist/index.umd.js",
-  "files": [
-    "dist",
-    "assets/fonts",
-    "README.md"
-  ]
+  }
 }

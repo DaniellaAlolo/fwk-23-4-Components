@@ -1,4 +1,5 @@
 import pkg from './package.json' assert {type: "json"};
+// import json from '@rollup/plugin-json '
 
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -45,6 +46,7 @@ export default {
         }),
     commonjs(),
     image(),
+    // json(),
     terser(),
     babel({
       babelHelpers: 'bundled', // Bundles the helpers in the same file

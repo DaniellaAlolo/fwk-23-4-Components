@@ -1,4 +1,3 @@
-import dummyTasks from './dummyTasks.json';
 import TaskAtom from './TaskAtom';
 import styles from "./ToDoBoard.module.css";
 import { IoMdMore } from "react-icons/io";
