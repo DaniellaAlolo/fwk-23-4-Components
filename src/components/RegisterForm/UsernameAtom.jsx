@@ -1,21 +1,50 @@
-import styles from "./RegisterForm.module.css";
+/*import styles from "./RegisterForm.module.css";
 
-const UsernameAtom = () => {
+const UsernameAtom = ({ onUserChange, value = "", label = "Username" }) => {
+  const handleUserChange = (e) => {
+    onUserChange(e.target.value);
+  };
+
   return (
-    <form>
-      <div className={styles.formGroup}>
-        <label className={styles.label} htmlFor="ursername">
-          Username
-        </label>
+    <div className={styles.formGroup}>
+      <label className={styles.label}>
+        {label}:
         <input
           className={styles.input}
           type="text"
-          id="ursername"
-          ursername="ursername"
+          id="username"
+          onChange={handleUserChange}
+          value={value}
+          placeholder="Enter usernamne"
         />
-      </div>
-    </form>
+      </label>
+    </div>
   );
 };
 
+export default UsernameAtom;
+*/
+import styles from "./RegisterForm.module.css";
+
+const UsernameAtom = ({ onUserChange, value }) => {
+  const handleChange = (e) => {
+    onUserChange(e.target.value);
+  };
+
+  return (
+    <div className={styles.formGroup}>
+      <label className={styles.label} htmlFor="username">
+        Username
+      </label>
+      <input
+        className={styles.input}
+        type="text"
+        id="username"
+        onChange={handleChange}
+        value={value}
+        placeholder="Enter username"
+      />
+    </div>
+  );
+};
 export default UsernameAtom;

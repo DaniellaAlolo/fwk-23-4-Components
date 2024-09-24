@@ -54,4 +54,3 @@ export default {
   ],
   external: Object.keys(pkg.peerDependencies || {})
 };
-

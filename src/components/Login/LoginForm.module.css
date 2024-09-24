@@ -38,9 +38,11 @@
   align-items: center;
   background-color: white;
   flex-direction: row;
+  overflow: hidden;
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .input {
@@ -80,22 +82,26 @@
 .submitButton:hover {
   background-color: #5a6268;
 }
-.loginWrapper{
+
+.loginWrapper {
   flex-direction: column;
   align-items: center;
   justify-content: center;
   display: flex;
 }
-.login{
+
+.login {
   display: grid;
-  padding: 0 !important;margin: 0;
-  background-color:#c8c9c8;
-      align-items: center;
+  padding: 0 !important;
+  margin: 0;
+  background-color: #c8c9c8;
+  align-items: center;
   height: 100svh;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1;
 }
-.sidebar{
+
+.sidebar {
   background-color: rgb(28, 56, 80);
   align-items: center;
   justify-content: center;
@@ -105,17 +111,18 @@
   border-radius: 100px 0px 0px 100px;
   height: 100%;
 }
-.sidebarContent{
+
+.sidebarContent {
   padding: 40px;
   text-align: center;
   color: white;
 }
 
-a{
+a {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
-h1{
+
+h1 {
   padding-bottom: 40px;
 }
-
