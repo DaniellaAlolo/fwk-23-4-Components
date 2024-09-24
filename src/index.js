@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 import { InputForm } from "./components/inputFormPrompts";
 import { LoginForm } from "./components/Login";
 import { Message } from "./components/message";
-import { Modal } from "./components/modal";
+import { Modal } from "./components/taskModal";
 import { Navbar } from "./components/Navbar/";
 import { RegisterForm } from "./components/RegisterForm";
 import { Sidebar } from "./components/Sidebar";
