@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
 import styles from './LoginForm.module.css';
 import { useState } from 'react';
+import { IoKeyOutline } from "react-icons/io5";
 
 const PasswordLoginAtom = ({ onPasswordChange, label = "Password" }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,7 +21,7 @@ const PasswordLoginAtom = ({ onPasswordChange, label = "Password" }) => {
     <div className={styles.formGroup}>
       <label className={styles.label} htmlFor="login-password">{label}</label>
       <div className={styles.inputWrapper}>
-        <FontAwesomeIcon icon={faLock} className={styles.icon} />
+        <IoKeyOutline className={styles.icon} />
         <input
           type={showPassword ? "text" : "password"}
           className={styles.input}

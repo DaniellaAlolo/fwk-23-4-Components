@@ -1,4 +1,5 @@
 import styles from './LoginForm.module.css';
+import { MdAlternateEmail } from "react-icons/md";
 
 const EmailLoginAtom = ({ onEmailChange, label = "Email" }) => {
   if (!onEmailChange) {
@@ -15,10 +16,11 @@ const EmailLoginAtom = ({ onEmailChange, label = "Email" }) => {
 
   return (
     <div className={styles.formGroup}>
-      <label className={styles.label} htmlFor="login-email">{label}
+      <label className={styles.label} htmlFor="login-email">
+        {label}
       </label>
       <div className={styles.inputWrapper}>
-        <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
+        <MdAlternateEmail className={styles.icon} />
         <input className={styles.input}
           onChange={handleChange}
           type="email" id="login-email" name="email" />
