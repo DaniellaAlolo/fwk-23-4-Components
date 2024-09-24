@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/src/assets/Poppins-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+  }
+.home {
+    display: flex;
+    flex-direction:"row";
+    width:100%;
+    height:100svh;
+}
+.chatWrapper{
+    display:flex;
+    flex-direction: column;
+    place-content: end; 
+    align-items: center;
+    gap: 20px;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 20px;
+}
+*{
+    font-family: 'Poppins';
+}

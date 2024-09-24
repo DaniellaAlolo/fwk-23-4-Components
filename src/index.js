@@ -1,13 +1,31 @@
-export { default as Header } from './components/Header/Header';
-export { default as LoginForm } from './components/Login/LoginForm';
-export { default as Logo } from './components/Logo/Logo';
-export { default as Navbar } from './components/Navbar/Navbar';
-export { default as RegisterForm } from './components/RegisterForm/RegisterForm';
-export { default as SettingsBtn } from './components/SettingsBtn/SettingsBtn';
-export { default as Sidebar } from './components/Sidebar/Sidebar';
-export { default as Footer } from './components/footer/Footer';
-export { default as InputForm } from './components/inputFormPrompts/InputForm';
-export { default as Message } from './components/message/Message';
-export { default as Modal } from './components/modal/Modal';
-export { default as Chat } from './components/chat/Chat';
-export { default as TodoBoard } from './components/to-do/TodoBoard';
+import { Chat } from "./components/chat";
+import { Footer } from "./components/footer";
+import { Header } from "./components/Header";
+import { InputForm } from "./components/inputFormPrompts";
+import { LoginForm } from "./components/Login";
+import { Message } from "./components/message";
+import { Modal } from "./components/modal";
+import { Navbar } from "./components/Navbar/";
+import { RegisterForm } from "./components/RegisterForm";
+import { SettingsBtn } from "./components/SettingsBtn";
+import { Sidebar } from "./components/Sidebar";
+import { TodoBoard } from "./components/to-do";
+import { Home } from "./pages/home/";
+import { Landing } from "./pages/landing/";
+
+export {
+    Chat,
+    Header,
+    Home,
+    Landing,
+    Footer,
+    InputForm,
+    LoginForm,
+    Message,
+    Modal,
+    Navbar,
+    RegisterForm,
+    SettingsBtn,
+    Sidebar,
+    TodoBoard,
+};

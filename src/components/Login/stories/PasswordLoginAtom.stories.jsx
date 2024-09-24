@@ -1,4 +1,4 @@
-import PasswordLoginAtom from './PasswordLoginAtom';
+import PasswordLoginAtom from '../PasswordLoginAtom';
 
 export default {
   title: 'Component/LoginForm/PasswordLoginAtom',  

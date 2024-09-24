@@ -2,36 +2,42 @@
     {
         "id": 1,
         "title": "Buy Groceries",
+        "category":"Food",
         "description": "Buy groceries for dinner tonight",
         "status": "to-do"
     },
     {
         "id": 2,
         "title": "Study interview questions",
+        "category":"Career",
         "description": "Practice developer interview questions",
         "status": "to-do"
     },
     {
         "id": 3,
         "title": "Create UI mockups",
+        "category":"Career",
         "description": "Design the user interface for the application.",
         "status": "doing"
     },
     {
         "id": 4,
         "title": "Designing components",
+        "category":"Career",
         "description": "Design and create components for my app",
         "status": "doing"
     },
     {
         "id": 5,
-        "title": "Write unit tests for components",
-        "description": "Ensure all UI components are covered with tests.",
+        "title": "Buy clothes for camping",
+        "category":"Shopping",
+        "description": "Ensure appropriate camping gear for upcoming hiking trip the 15th",
         "status": "done"
     },
     {
         "id": 6,
         "title": "Setup CI/CD pipeline",
+        "category":"Career",
         "description": "Automate testing and deployment processes.",
         "status": "done"
     }

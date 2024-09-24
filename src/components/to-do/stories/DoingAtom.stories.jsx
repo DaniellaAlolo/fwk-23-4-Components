@@ -1,4 +1,4 @@
-import DoingAtom from "./DoingAtom";
+import DoingAtom from "../DoingAtom";
 
 export default {
     title:'Component/To-do Board/DoingAtom',
