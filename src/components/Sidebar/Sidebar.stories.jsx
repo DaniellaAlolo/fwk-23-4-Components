@@ -1,9 +1,10 @@
-import Sidebar from './Sidebar';  
+import Sidebar from './Sidebar';
 
 export default {
-  title: 'Component/Sidebar',  
+  title: 'Component/Sidebar',
+  component: Sidebar
 };
 
 export const Default = {
-  
+
 };
