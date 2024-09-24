@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react';
 const MockLoginContext = createContext();
 
 export const MockLoginProvider = ({ children }) => {
-    const [userId, setUserId] = useState(null);
+    const [userId, setUserId] = useState('');
 
     const mockLoginFunction = (email, password) => {
         if (email === 'test@test.se' && password === 'testpassword') {

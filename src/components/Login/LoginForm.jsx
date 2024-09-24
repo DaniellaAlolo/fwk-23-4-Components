@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import styles from './LoginForm.module.css';
 import EmailLoginAtom from './EmailLoginAtom';
 import PasswordLoginAtom from './PasswordLoginAtom';
@@ -7,18 +7,18 @@ import Btn from '../btn/Btn';
 import LoginSidebar from './LoginSidebar';
 
 const LoginForm = () => {
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  // const handleLoginClick = () => {
-  //   if (loginFunction) {
-  //     loginFunction(email, password);
-  //   } else {
-  //     console.error('No login function provided!');
-  //     console.error('Email:', email);
-  //     console.error('Password:', password);
-  //   }
-  // };
+  const handleLoginClick = () => {
+    if (loginFunction) {
+      loginFunction(email, password);
+    } else {
+      console.error('No login function provided!');
+      console.error('Email:', email);
+      console.error('Password:', password);
+    }
+  };
 
   return (
     <div className={styles.login}>
