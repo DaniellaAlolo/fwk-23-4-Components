@@ -3,6 +3,11 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+
+  input: 'src/index.js',
+  output: [],
+  plugins: [],
+  external: {},
   plugins: [react()],
   css: {
     modules: {},
