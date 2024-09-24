@@ -21,10 +21,9 @@ const TodoBoard = () => {
             <div className={styles.boardHeader}>
                 <h1>To-Do Board</h1>
                 <Btn icon={<MdAdd />} text="Add task" onClick={openModal} />
-                <Modal ref={modalRef} />
+                <Modal modalTitle="Add Task" btnText="Add Task"  ref={modalRef} />
                 <div className={styles.taskControls}>
                     <Btn icon={<MdOutlineModeEdit />} text="Edit tasks" onClick={openModal} />
-
                 </div>
             </div>
             <div className={styles.toDoBoard}>

@@ -6,12 +6,12 @@ import DropdownAtom from "./DropdownAtom";
 import RadioBtnAtom from "./RadioBtnAtom";
 import Btn from "../btn/Btn";
 
-const Modal = forwardRef((props, ref) => {
+const Modal = forwardRef(({ modalTitle, btnText, onSubmit }, ref) => {
   const dialogRef = useRef(null);
 
   const [taskName, setTaskName] = useState("");
-  const [status, setStatus] = useState("");  
-  const [category, setCategory] = useState("");  
+  const [status, setStatus] = useState("");
+  const [category, setCategory] = useState("");
 
   useImperativeHandle(ref, () => ({
     showModal() {
@@ -30,20 +30,16 @@ const Modal = forwardRef((props, ref) => {
   return (
     <dialog className={styles.modal} ref={dialogRef}>
       <div className={styles.modalTab}>
-        <h3 className={styles.modalHeader}>Add new task</h3>
+        <h3 className={styles.modalHeader}>{modalTitle}</h3>
         <form method="dialog">
-          <button className={styles.modalCloseBtn}>
-            <IoCloseOutline size={24} />
-          </button>
+          <Btn icon={<IoCloseOutline />}/>
         </form>
       </div>
       <div className={styles.modalBody}>
         <ModalForm taskName={taskName} setTaskName={setTaskName} />
         <DropdownAtom category={category} setCategory={setCategory} />
         <RadioBtnAtom status={status} setStatus={setStatus} />
-        <Btn text="Add Task"/>
-
-        {/* <Btn text="Add Task" onClick={handleTaskSubmit} /> */}
+        <Btn text={btnText} onClick={onSubmit} />
       </div>
     </dialog>
   );
