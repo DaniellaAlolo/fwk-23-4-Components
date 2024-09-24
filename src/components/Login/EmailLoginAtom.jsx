@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './LoginForm.module.css';
 
 const EmailLoginAtom = ({ onEmailChange, label = "Email" }) => {
