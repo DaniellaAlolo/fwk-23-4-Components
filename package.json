@@ -2,7 +2,7 @@
   "name": "fwk-23-4-components",
   "main": "./src/index.js",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
