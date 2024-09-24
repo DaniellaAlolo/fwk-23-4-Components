@@ -2,6 +2,8 @@
     background-color: #425c76;
     padding: 15px;
     display: flex;
+    position: sticky;
+    width: 100%;
     justify-content: space-around; 
   }
   
