@@ -6,12 +6,12 @@ import { useState } from "react";
 import AvatarAtom from "./AvatarAtom";
 import { FaBell, FaCog } from "react-icons/fa";
 
-const Header = ({ title, subtitle }) => {
+const Header = ({ title, subtitle, className }) => {
   const [userName, setUserName] = useState("John Doe");
   const [avatar, setAvatar] = useState("");
   return (
     <>
-      <div className={styles.headerContainer}>
+      <div className={`${styles.headerContainer} ${className}`}>
         <div className={styles.headerLeft}>
           <TitleAtom title={title} />
           <SubtitleAtom subtitle={subtitle} />
