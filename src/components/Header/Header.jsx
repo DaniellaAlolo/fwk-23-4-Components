@@ -5,9 +5,10 @@ import SubtitleAtom from "./SubtitleAtom";
 import { useState } from "react";
 import AvatarAtom from "./AvatarAtom";
 import { FaBell, FaCog } from "react-icons/fa";
+import AvatarDisplayAtom from "./AvatarDisplayAtom";
 
 const Header = ({ title, subtitle, className }) => {
-  const [userName, setUserName] = useState("John Doe");
+  const [userName, setUserName] = useState("");
   const [avatar, setAvatar] = useState("");
   return (
     <>
@@ -22,6 +23,7 @@ const Header = ({ title, subtitle, className }) => {
           <FaCog className={styles.icon} title="Settings" />
           <AvatarAtom avatar={avatar} onChangeAvatar={setAvatar} />
           <ProfileAtom userName={userName} />
+          <AvatarDisplayAtom avatar={avatar} />
         </div>
       </div>
     </>
