@@ -4,6 +4,7 @@ import EmailAtom from "./EmailAtom";
 import PasswordAtom from "./PasswordAtom";
 import RegisterBtn from "./RegisterBtn";
 import RegistrationStatus from "./RegistrationStatus";
+import React from 'react';
 
 const RegisterForm = ({
   userData = {}, // Default-värde

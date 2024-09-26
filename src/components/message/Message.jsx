@@ -1,6 +1,7 @@
 import AiAtom from "./AiAtom";
 import styles from "./message.module.css";
 import Btn from "../btn/Btn"
+import React from 'react';
 import { MdAdd } from "react-icons/md";
 
 

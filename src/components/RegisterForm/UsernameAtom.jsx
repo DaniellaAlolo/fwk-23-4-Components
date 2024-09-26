@@ -25,6 +25,7 @@ const UsernameAtom = ({ onUserChange, value = "", label = "Username" }) => {
 export default UsernameAtom;
 */
 import styles from "./RegisterForm.module.css";
+import React from 'react';
 
 const UsernameAtom = ({ onUserChange, value }) => {
   const handleChange = (e) => {

@@ -5,6 +5,7 @@ import SubtitleAtom from "./SubtitleAtom";
 import { useState } from "react";
 import AvatarAtom from "./AvatarAtom";
 import { FaBell, FaCog } from "react-icons/fa";
+import React from 'react';
 
 const Header = ({ title, subtitle }) => {
   const [userName, setUserName] = useState("John Doe");

@@ -1,5 +1,6 @@
 import styles from "./Chat.module.css";
 import SendBtn from "./SendBtn";
+import React from 'react';
 
 const Chat = () => {
     return (

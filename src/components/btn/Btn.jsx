@@ -1,4 +1,5 @@
 import styles from './Btn.module.css';
+import React from 'react';
 
 const Button = ({ text, onClick, icon }) => {
   console.log(icon);

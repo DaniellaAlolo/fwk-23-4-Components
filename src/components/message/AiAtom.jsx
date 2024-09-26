@@ -1,5 +1,6 @@
 import styles from "./message.module.css";
 import { FaBrain } from "react-icons/fa";
+import React from 'react';
 
 const AiAtom = () => {
     return (

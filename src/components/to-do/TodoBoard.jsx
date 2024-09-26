@@ -6,6 +6,7 @@ import { MdOutlineModeEdit, MdAdd } from "react-icons/md";
 import { useRef } from "react";
 import Modal from "../taskModal/Modal";
 import Btn from '../btn/Btn'
+import React from 'react';
 
 const TodoBoard = () => {
     const modalRef = useRef(null);

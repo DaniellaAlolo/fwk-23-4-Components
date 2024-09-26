@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './InputForm.module.css'; // Importera CSS-modulen som ett objekt
+import styles from './InputForm.module.css'; 
 
 const InputForm = ({ label, placeholder, onSubmit }) => {
     const [inputValue, setInputValue] = useState('');

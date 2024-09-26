@@ -1,6 +1,7 @@
 import styles from "./Header.module.css";
 import { FaUser } from "react-icons/fa";
 import { useState } from "react";
+import React from 'react';
 
 const avatars = [
   "https://i.pravatar.cc/200?img=1",

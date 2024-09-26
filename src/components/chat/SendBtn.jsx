@@ -1,5 +1,6 @@
 import styles from "./chat.module.css";
 import { BsArrowUp } from "react-icons/bs";
+import React from 'react';
 
 const SendBtn = () => {
     return (

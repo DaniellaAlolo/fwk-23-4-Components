@@ -1,6 +1,8 @@
 import TaskAtom from "./TaskAtom";
 import styles from "./ToDoBoard.module.css";
 import { IoMdMore } from "react-icons/io";
+import dummyTasks from "./dummyTasks.json";
+import React from 'react';
 
 const DoingAtom = () => {
     const doingTasks = dummyTasks.filter((task) => task.status === "doing");

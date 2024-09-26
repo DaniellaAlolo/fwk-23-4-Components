@@ -1,4 +1,4 @@
-import styles from "./Modal.module.css";
+import React from 'react';
 
 const DropdownAtom = ({ category, setCategory }) => {
     return (

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const RadioBtnAtom = ({ status, setStatus }) => {
     const statuses = ["To-do", "Doing", "Done"]; 
   

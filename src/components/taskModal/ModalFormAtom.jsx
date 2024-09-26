@@ -1,4 +1,5 @@
 import styles from "./Modal.module.css";
+import React from 'react';
 
 const ModalFormAtom = ({ taskName, setTaskName }) => {
     return (

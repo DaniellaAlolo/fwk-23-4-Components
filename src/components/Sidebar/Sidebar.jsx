@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSignInAlt, faTasks } from '@fortawesome/free-solid-svg-icons';  
 import styles from './Sidebar.module.css';  
+import React from 'react';
 
 const Sidebar = () => {
   return (

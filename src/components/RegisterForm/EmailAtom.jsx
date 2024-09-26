@@ -1,4 +1,5 @@
 import styles from "./RegisterForm.module.css";
+import React from 'react';
 
 const EmailAtom = ({ onEmailChange, value }) => {
   const handleEmailChange = (e) => {

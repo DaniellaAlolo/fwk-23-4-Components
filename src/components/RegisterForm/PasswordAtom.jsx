@@ -1,4 +1,5 @@
 import styles from "./RegisterForm.module.css";
+import React from 'react';
 
 const PasswordAtom = ({ onPasswordChange, value }) => {
   const handlePasswordChange = (e) => {
