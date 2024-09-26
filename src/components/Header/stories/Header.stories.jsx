@@ -25,9 +25,14 @@ WithSubtitleExample3.args = {
   className: styles.headerContainer3,
 };
 
-export const HeaderWithoutTitle =
-   {
-    args: {
-      title: '',
+export const HeaderWithoutTitle = {
+  args: {
       subtitle: '',  
-  }  };
+  }  
+};
+
+export const HeaderWithoutSubitle = {
+  args: {
+      title: '',  
+  }  
+};

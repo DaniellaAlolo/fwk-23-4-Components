@@ -10,6 +10,7 @@ import AvatarDisplayAtom from "./AvatarDisplayAtom";
 const Header = ({ title, subtitle, className }) => {
   const [userName, setUserName] = useState("");
   const [avatar, setAvatar] = useState("");
+
   return (
     <>
       <div className={`${styles.headerContainer} ${className}`}>
