@@ -1,5 +1,5 @@
-import Header from "./Header";
-import styles from "./Header.module.css";
+import Header from "../Header";
+import styles from "../Header.module.css";
 
 export default {
   title: "Component/Header",
@@ -24,3 +24,10 @@ WithSubtitleExample3.args = {
   subtitle: "Tailored Help to Maximize Your Productivity",
   className: styles.headerContainer3,
 };
+
+export const HeaderWithoutTitle =
+   {
+    args: {
+      title: '',
+      subtitle: '',  
+  }  };

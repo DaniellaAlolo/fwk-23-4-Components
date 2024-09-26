@@ -1,4 +1,4 @@
-import AvatarDisplayAtom from "./AvatarDisplayAtom";
+import AvatarDisplayAtom from "../AvatarDisplayAtom";
 
 export default {
   title: "Component/Header/AvatarDispalyAtom",

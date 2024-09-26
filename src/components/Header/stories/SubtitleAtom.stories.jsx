@@ -1,4 +1,4 @@
-import SubtitleAtom from "./SubtitleAtom";
+import SubtitleAtom from "../SubtitleAtom";
 
 export default {
   title: "Component/Header/SubtitleAtom",

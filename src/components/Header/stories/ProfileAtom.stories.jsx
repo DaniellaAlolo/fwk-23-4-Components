@@ -1,4 +1,4 @@
-import ProfileAtom from "./ProfileAtom";
+import ProfileAtom from "../ProfileAtom";
 
 export default {
   title: "Component/Header/ProfileAtom",

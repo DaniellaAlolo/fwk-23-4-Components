@@ -1,4 +1,4 @@
-import TitleAtom from "./TitleAtom";
+import TitleAtom from "../TitleAtom";
 
 export default {
   title: "Component/Header/TitleAtom",

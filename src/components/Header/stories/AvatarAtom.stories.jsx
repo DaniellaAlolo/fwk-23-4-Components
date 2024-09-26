@@ -1,4 +1,4 @@
-import AvatarAtom from "./AvatarAtom";
+import AvatarAtom from "../AvatarAtom";
 import { useState } from "react";
 
 export default {

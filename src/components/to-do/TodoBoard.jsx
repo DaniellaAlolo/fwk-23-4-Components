@@ -3,9 +3,10 @@ import TasksToDoAtom from "./TasksToDoAtom";
 import DoingAtom from "./DoingAtom";
 import DoneAtom from "./DoneAtom";
 import { MdOutlineModeEdit, MdAdd } from "react-icons/md";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Modal from "../taskModal/Modal";
 import Btn from '../btn/Btn'
+import React from 'react';
 
 const TodoBoard = () => {
     const modalRef = useRef(null);
@@ -16,15 +17,14 @@ const TodoBoard = () => {
         }
     };
 
+    const editTasks = () =
+
     return (
         <div className={styles.boardWrapper}>
             <div className={styles.boardHeader}>
                 <h1>To-Do Board</h1>
                 <Btn icon={<MdAdd />} text="Add task" onClick={openModal} />
-                <Modal ref={modalRef} />
-                <div className={styles.taskControls}>
-                    <Btn icon={<MdOutlineModeEdit />} text="Edit tasks" onClick={openModal} />
-                </div>
+                <Btn icon={<MdOutlineModeEdit />} text="Edit tasks" onClick={editTasks} />
             </div>
             <div className={styles.toDoBoard}>
                 <TasksToDoAtom />

@@ -4,7 +4,8 @@ import React from 'react';
 const SubtitleAtom = ({ subtitle }) => {
   return (
     <>
-      <h3 className={styles.subtitle}>{subtitle}</h3>
+      {!subtitle && <p>Must have subtitle</p>}
+      {subtitle && <h3 className={styles.subtitle}>{subtitle}</h3>}
     </>
   );
 };
