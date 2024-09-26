@@ -1,5 +1,6 @@
 import styles from './LoginForm.module.css';
 import { MdAlternateEmail } from "react-icons/md";
+import React from 'react';
 
 const EmailAtom = ({ onEmailChange, label = "Email" }) => {
     if (!onEmailChange) {
