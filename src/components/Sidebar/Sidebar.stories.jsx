@@ -1,4 +1,4 @@
-import Sidebar from './Sidebar';  
+import Sidebar from './Sidebar';
 
 export default {
   title: 'Component/Sidebar',  
@@ -6,5 +6,5 @@ export default {
 };
 
 export const Default = {
-  
+
 };

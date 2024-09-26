@@ -4,7 +4,7 @@ const ProfileAtom = ({ userName }) => {
   return (
     <>
       <div>
-        <span>User: {userName} </span>
+        <span> {userName} </span>
       </div>
     </>
   );

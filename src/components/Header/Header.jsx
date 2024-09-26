@@ -5,14 +5,15 @@ import SubtitleAtom from "./SubtitleAtom";
 import { useState } from "react";
 import AvatarAtom from "./AvatarAtom";
 import { FaBell, FaCog } from "react-icons/fa";
+import AvatarDisplayAtom from "./AvatarDisplayAtom";
 import React from 'react';
 
-const Header = ({ title, subtitle }) => {
-  const [userName, setUserName] = useState("John Doe");
+const Header = ({ title, subtitle, className }) => {
+  const [userName, setUserName] = useState("");
   const [avatar, setAvatar] = useState("");
   return (
     <>
-      <div className={styles.headerContainer}>
+      <div className={`${styles.headerContainer} ${className}`}>
         <div className={styles.headerLeft}>
           <TitleAtom title={title} />
           <SubtitleAtom subtitle={subtitle} />
@@ -23,6 +24,7 @@ const Header = ({ title, subtitle }) => {
           <FaCog className={styles.icon} title="Settings" />
           <AvatarAtom avatar={avatar} onChangeAvatar={setAvatar} />
           <ProfileAtom userName={userName} />
+          <AvatarDisplayAtom avatar={avatar} />
         </div>
       </div>
     </>

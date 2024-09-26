@@ -4,7 +4,7 @@ import React from 'react';
 const TitleAtom = ({ title }) => {
   return (
     <>
-      <h2 className={styles.title}>Ai Assistant</h2>
+      <h2 className={styles.title}>{title}</h2>
     </>
   );
 };
