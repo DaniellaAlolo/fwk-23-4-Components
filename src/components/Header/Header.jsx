@@ -2,11 +2,10 @@ import styles from "./Header.module.css";
 import ProfileAtom from "./ProfileAtom";
 import TitleAtom from "./TitleAtom";
 import SubtitleAtom from "./SubtitleAtom";
-import { useState } from "react";
+import React, { useState } from 'react';
 import AvatarAtom from "./AvatarAtom";
 import { FaBell, FaCog } from "react-icons/fa";
 import AvatarDisplayAtom from "./AvatarDisplayAtom";
-import React from 'react';
 
 const Header = ({ title, subtitle, className }) => {
   const [userName, setUserName] = useState("");

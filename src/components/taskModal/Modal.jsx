@@ -1,11 +1,10 @@
-import { useRef, useState, forwardRef, useImperativeHandle } from "react";
+import React, { useRef, useState, forwardRef, useImperativeHandle } from "react";
 import styles from "./Modal.module.css";
 import { IoCloseOutline } from "react-icons/io5";
 import ModalForm from "./ModalFormAtom";
 import DropdownAtom from "./DropdownAtom";
 import RadioBtnAtom from "./RadioBtnAtom";
 import Btn from "../btn/Btn";
-import React from 'react';
 
 const Modal = forwardRef((props, ref) => {
   const dialogRef = useRef(null);
