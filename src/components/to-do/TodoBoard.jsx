@@ -17,7 +17,9 @@ const TodoBoard = () => {
         }
     };
 
-    const editTasks = () =
+    const editTasks = () => {
+
+    }
 
     return (
         <div className={styles.boardWrapper}>
