@@ -9,14 +9,10 @@ import { RegisterForm } from "./components/RegisterForm";
 import { LoginForm } from "./components/login";
 import { Sidebar } from "./components/Sidebar";
 import { TodoBoard } from "./components/to-do";
-import { Home } from "./pages/home/";
-import { Landing } from "./pages/landing/";
 
 export {
     Chat,
     Header,
-    Home,
-    Landing,
     Footer,
     InputForm,
     Message,
