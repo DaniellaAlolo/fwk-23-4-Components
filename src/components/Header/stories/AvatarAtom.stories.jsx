@@ -2,7 +2,7 @@ import AvatarAtom from "../AvatarAtom";
 import { useState } from "react";
 
 export default {
-  title: "Component/Atoms/AvatarAtom",
+  title: "Component/Header/AvatarAtom",
   component: AvatarAtom,
 };
 
