@@ -6,7 +6,6 @@ export default defineConfig({
 
   input: 'src/index.js',
   output: [],
-  plugins: [],
   external: {},
   plugins: [react()],
   css: {
