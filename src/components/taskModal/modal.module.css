@@ -16,7 +16,7 @@
 .modal[open] {
     display: flex;
 }
-.modalBody{
+.modalBody {
     width: 90%;
     padding: 14px;
     gap: 20px;
@@ -34,19 +34,24 @@
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.463);
 }
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-fieldset{
+fieldset {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
-select{
+select {
     padding: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(127, 127, 127, 0.523);
 }
 textarea {
     resize: none;
-  }
+}
+label{
+    font-size: 0.9rem;
+}

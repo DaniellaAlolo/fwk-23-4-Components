@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignInAlt, faTasks } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Sidebar.module.css";
 import React from "react";
 import { MdLogin, MdOutlineHome, MdChecklist } from "react-icons/md";
@@ -9,19 +7,19 @@ const Sidebar = () => {
             <ul className={styles.sidebarList}>
                 <li className={styles.sidebarItem}>
                     <a href="/">
-                        <MdOutlineHome />
+                        <MdOutlineHome size={20}/>
                         Home
                     </a>
                 </li>
                 <li className={styles.sidebarItem}>
                     <a href="#Login">
-                        <MdLogin />
+                        <MdLogin size={20}/>
                         Login
                     </a>
                 </li>
                 <li className={styles.sidebarItem}>
                     <a href="/dashboard">
-                        <MdChecklist />
+                        <MdChecklist size={20}/>
                         Tasks
                     </a>
                 </li>
