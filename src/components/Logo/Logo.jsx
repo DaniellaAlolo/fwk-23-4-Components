@@ -1,12 +1,14 @@
 import LogoImage from './Logo.jpg';
 import React from 'react';
+import styles from './Logo.module.css';
 
 const Logo = () => {
   return (
     <img
       src={LogoImage}
       alt="Logo"
-      style={{ width: '200px', height: 'auto' }}
+      className={styles.logo} 
+      style={{ width: '100%', maxWidth: '200px', height: 'auto' }} 
     />
   );
 };
