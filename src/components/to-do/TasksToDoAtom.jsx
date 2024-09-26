@@ -1,12 +1,9 @@
-import TaskAtom from './TaskAtom';
+import TaskAtom from "./TaskAtom";
 import styles from "./ToDoBoard.module.css";
 import { IoMdMore } from "react-icons/io";
-import dummyTasks from "./dummyTasks.json";
 import React from 'react';
 
-const TasksToDoAtom = () => {
-    const toDoTasks = dummyTasks.filter(task => task.status === 'to-do');
-
+const DoneAtom = ({ tasks, isEditing, editTask }) => {
     return (
         <div className={styles.toDoWrapper}>
             <div className={styles.columnTitle}>
@@ -14,12 +11,12 @@ const TasksToDoAtom = () => {
                 <IoMdMore size={20} />
             </div>
             <div className={styles.tasks}>
-                {toDoTasks.map((task) => (
-                    <TaskAtom key={task.id} task={task} />
+                {tasks.map((task) => (
+                    <TaskAtom key={task.id} isEditing={isEditing}  task={task} onEdit={editTask} />
                 ))}
             </div>
         </div>
     );
 };
 
-export default TasksToDoAtom;
+export default DoneAtom;
