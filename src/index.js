@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Chat } from "./components/chat";
 import { Footer } from "./components/footer";
 import { Header } from "./components/Header";
