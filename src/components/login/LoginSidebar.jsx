@@ -1,4 +1,5 @@
 import styles from './LoginForm.module.css';
+import React from 'react';
 
 const LoginSidebar = () => {
     return (
