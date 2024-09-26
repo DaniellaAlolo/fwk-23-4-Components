@@ -1,4 +1,4 @@
-import PasswordAtom from "./PasswordAtom";
+import PasswordAtom from "../PasswordAtom";
 
 export default {
   title: "Component/RegisterForm/PassworAtom",

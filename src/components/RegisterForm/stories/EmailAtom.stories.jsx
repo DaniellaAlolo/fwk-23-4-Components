@@ -1,4 +1,4 @@
-import EmailAtom from "./EmailAtom";
+import EmailAtom from "../EmailAtom";
 
 export default {
   title: "Component/RegisterForm/EmailAtom",

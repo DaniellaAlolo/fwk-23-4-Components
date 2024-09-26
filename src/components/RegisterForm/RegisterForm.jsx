@@ -2,9 +2,10 @@ import styles from "./RegisterForm.module.css";
 import UsernameAtom from "./UsernameAtom";
 import EmailAtom from "./EmailAtom";
 import PasswordAtom from "./PasswordAtom";
-import RegisterBtn from "./RegisterBtn";
 import RegistrationStatus from "./RegistrationStatus";
 import React from 'react';
+import { MdOutlineAccountCircle } from "react-icons/md";
+import LoginSidebar from "../login/LoginSidebar";
 
 const RegisterForm = ({
   userData = {}, // Default-värde
@@ -31,19 +32,24 @@ const RegisterForm = ({
     handleFormSubmit(); // Anropa submit-funktionen
   };
   return (
-    <>
-      <form className={styles.form}>
-        <h2 className={styles.title}>Register</h2>
-        <UsernameAtom onChange={handleUserChange} value={userData.username} />
-        <EmailAtom onEmailChange={handleEmailChange} value={userData.email} />
-        <PasswordAtom
-          onPasswordChange={handlePasswordChange}
-          value={userData.password}
-        />
-        <RegisterBtn />
-        <RegistrationStatus success={registrationSuccess} />
-      </form>
-    </>
+    <div className={styles.register}>
+      <div className={styles.registerWrapper}>
+        <h1>AI APP NAME</h1>
+        <form className={styles.form}>
+          <h2 className={styles.title}>Register</h2>
+          <UsernameAtom onChange={handleUserChange} value={userData.username} />
+          <EmailAtom onEmailChange={handleEmailChange} value={userData.email} />
+          <PasswordAtom
+            onPasswordChange={handlePasswordChange}
+            value={userData.password}
+          />
+          <Btn text="Register" icon={<MdOutlineAccountCircle />} onClick={handleFormSubmit} />
+          <RegistrationStatus success={registrationSuccess} />
+        </form>
+        <a href="login">Already have a account? Go to login</a>
+      </div>
+      <LoginSidebar />
+    </div>
   );
 };
 

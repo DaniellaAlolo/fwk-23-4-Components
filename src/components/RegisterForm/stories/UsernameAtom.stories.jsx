@@ -1,4 +1,4 @@
-import UsernameAtom from "./UsernameAtom";
+import UsernameAtom from "../UsernameAtom";
 
 export default {
   title: "Component/RegisterForm/UsernameAtom",

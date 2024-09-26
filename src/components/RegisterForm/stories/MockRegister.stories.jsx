@@ -1,5 +1,5 @@
-import useMockRegister from "./MockRegister";
-import RegisterForm from "./RegisterForm";
+import useMockRegister from "../MockRegister";
+import RegisterForm from "../RegisterForm";
 
 export default {
   title: "Component/Registerform/MockRegister",
