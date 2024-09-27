@@ -1,12 +1,11 @@
-import styles from "./ToDoBoard.module.css";
+import styles from "./TodoBoard.module.css";
 import TasksToDoAtom from "./TasksToDoAtom";
 import DoingAtom from "./DoingAtom";
 import DoneAtom from "./DoneAtom";
 import { MdOutlineModeEdit, MdAdd } from "react-icons/md";
-import { useRef, useState } from "react";
+import React , { useRef, useState } from "react";
 import Modal from "../taskModal/Modal";
 import Btn from '../btn/Btn';
-import React from 'react';
 import dummyTasks from "./dummyTasks.json";
 
 const TodoBoard = () => {
