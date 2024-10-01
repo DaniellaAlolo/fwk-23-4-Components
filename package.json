@@ -1,5 +1,5 @@
 {
-  "name": "@sarahthebest/fwk-23-4-components",
+  "name": "@daniellaalolo/fwk-23-4-components",
   "main": "./dist/index.cjs.js",
   "module": "dist/index.es.js",
   "unpkg": "dist/index.umd.js",
