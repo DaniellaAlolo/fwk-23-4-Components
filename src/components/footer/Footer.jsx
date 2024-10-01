@@ -1,6 +1,13 @@
-import { FaFacebookF, FaTwitter, FaGoogle, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import styles from './Footer.module.css';
-import React from 'react';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGoogle,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+} from "react-icons/fa";
+import styles from "./Footer.module.css";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -10,7 +17,7 @@ const Footer = () => {
         {/* Facebook */}
         <a
           className={`${styles.socialButton}`}
-          style={{ backgroundColor: '#3b5998' }}
+          style={{ backgroundColor: "#3b5998" }}
           href="#!"
           role="button"
         >
@@ -20,7 +27,7 @@ const Footer = () => {
         {/* Twitter */}
         <a
           className={`${styles.socialButton}`}
-          style={{ backgroundColor: '#55acee' }}
+          style={{ backgroundColor: "#55acee" }}
           href="#!"
           role="button"
         >
@@ -30,7 +37,7 @@ const Footer = () => {
         {/* Google */}
         <a
           className={`${styles.socialButton}`}
-          style={{ backgroundColor: '#dd4b39' }}
+          style={{ backgroundColor: "#dd4b39" }}
           href="#!"
           role="button"
         >
@@ -40,7 +47,7 @@ const Footer = () => {
         {/* Instagram */}
         <a
           className={`${styles.socialButton}`}
-          style={{ backgroundColor: '#ac2bac' }}
+          style={{ backgroundColor: "#ac2bac" }}
           href="#!"
           role="button"
         >
@@ -50,7 +57,7 @@ const Footer = () => {
         {/* Linkedin */}
         <a
           className={`${styles.socialButton}`}
-          style={{ backgroundColor: '#0082ca' }}
+          style={{ backgroundColor: "#0082ca" }}
           href="#!"
           role="button"
         >
@@ -60,7 +67,7 @@ const Footer = () => {
         {/* Github */}
         <a
           className={`${styles.socialButton}`}
-          style={{ backgroundColor: '#333333' }}
+          style={{ backgroundColor: "#333333" }}
           href="#!"
           role="button"
         >
@@ -71,7 +78,7 @@ const Footer = () => {
       {/* Copyright section */}
       <div className={styles.footerText}>
         © 2024 Copyright:
-        <a  className="text-body"> Group5</a>
+        <a className="text-body"> Group5</a>
       </div>
     </footer>
   );
