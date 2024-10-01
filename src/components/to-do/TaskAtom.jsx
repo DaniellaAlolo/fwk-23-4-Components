@@ -1,4 +1,4 @@
-import styles from "./ToDoBoard.module.css";
+import styles from "./TodoBoard.module.css";
 import React, { useState } from 'react';
 import Btn from '../btn/Btn'
 
