@@ -8,7 +8,7 @@ const Button = ({ text, onClick, icon, backgroundColor }) => {
 
   return (
     <button
-      type="submit"
+      type="button"
       className={styles.submitBtn}
       style={buttonStyle}
       onClick={onClick}

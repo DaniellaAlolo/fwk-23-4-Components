@@ -58,6 +58,7 @@
     padding: 0px 10px;
     font-size: 16px;
     color: darkgray;
+
 }
 
 .submitButton {
@@ -125,4 +126,36 @@ a {
 
 h1 {
     padding-bottom: 40px;
+}
+
+.message {
+    margin-top: 10px;
+    /* Utrymme ovanför meddelandet */
+    padding: 10px;
+    /* Inre marginal för att ge lite utrymme */
+    border: 1px solid transparent;
+    /* Transparent för att inte påverka layout innan meddelandet visas */
+    border-radius: 4px;
+    /* Rundade hörn för meddelandet */
+    text-align: center;
+    /* Centrera texten */
+}
+
+/* Stilar för olika typer av meddelanden */
+.message.success {
+    color: #3c763d;
+    /* Grön färg för lyckade meddelanden */
+    background-color: #dff0d8;
+    /* Ljusgrön bakgrund */
+    border-color: #d6e9c6;
+    /* Grön kantlinje */
+}
+
+.message.error {
+    color: #a94442;
+    /* Röd färg för felmeddelanden */
+    background-color: #f2dede;
+    /* Ljus röd bakgrund */
+    border-color: #ebccd1;
+    /* Röd kantlinje */
 }

@@ -29,9 +29,22 @@ const LoginForm = () => {
           <h2 className={styles.title}>Login</h2>
           <EmailAtom email={email} onEmailChange={setEmail} />
           <PasswordAtom password={password} onPasswordChange={setPassword} />
-          <Btn text="Login" icon={<MdLogin />} onClick={handleLoginClick} />
+          <Btn
+            text="Login"
+            type="submit"
+            icon={<MdLogin />}
+            onClick={handleLoginClick}
+          />
+          {message && (
+            <p
+              className={`${styles.message} ${
+                message.includes("successful") ? styles.success : styles.error
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </form>
-        {message && <p className={styles.message}>{message}</p>}
       </div>
       <LoginSidebar />
     </div>

@@ -1,4 +1,4 @@
-import { Chat } from "./components/chat";
+import { Chat } from "./components/Chat";
 import { Footer } from "./components/footer";
 import { Header } from "./components/Header";
 import { InputForm } from "./components/inputFormPrompts";
@@ -11,15 +11,15 @@ import { Sidebar } from "./components/Sidebar";
 import { TodoBoard } from "./components/to-do";
 
 export {
-    Chat,
-    Header,
-    Footer,
-    InputForm,
-    Message,
-    Modal,
-    Navbar,
-    RegisterForm,
-    LoginForm,
-    Sidebar,
-    TodoBoard,
+  Chat,
+  Header,
+  Footer,
+  InputForm,
+  Message,
+  Modal,
+  Navbar,
+  RegisterForm,
+  LoginForm,
+  Sidebar,
+  TodoBoard,
 };

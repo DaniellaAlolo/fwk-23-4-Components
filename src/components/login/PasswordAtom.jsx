@@ -1,12 +1,18 @@
 import styles from "./LoginForm.module.css";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { IoKeyOutline } from "react-icons/io5";
 
 const PasswordAtom = ({ password, onPasswordChange, label = "Password" }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleChange = (e) => {
     onPasswordChange(e.target.value);
   };
+
+  const handleShowPasswordChange = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className={styles.formGroup}>
       <label className={styles.label} htmlFor="login-password">
@@ -15,7 +21,7 @@ const PasswordAtom = ({ password, onPasswordChange, label = "Password" }) => {
       <div className={styles.inputWrapper}>
         <IoKeyOutline className={styles.icon} />
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           value={password}
           className={styles.input}
           onChange={handleChange}
@@ -26,10 +32,9 @@ const PasswordAtom = ({ password, onPasswordChange, label = "Password" }) => {
       <div>
         <label>
           <input
-            name="checkbox"
             type="checkbox"
-            checked={password}
-            onChange={(e) => password(e.target.checked)}
+            checked={showPassword}
+            onChange={handleShowPasswordChange}
           />
           <span className="label-text">Show password</span>
         </label>
@@ -37,4 +42,5 @@ const PasswordAtom = ({ password, onPasswordChange, label = "Password" }) => {
     </div>
   );
 };
+
 export default PasswordAtom;
