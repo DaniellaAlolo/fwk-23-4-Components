@@ -1,13 +1,8 @@
-import LoginForm from '../LoginForm';
-import { MockLoginProvider } from '../MockLoginProvider.jsx';
+import LoginForm from "../LoginForm";
 
 export default {
-    title: 'Component/LoginForm',
-    component: LoginForm,
+  title: "Component/LoginForm",
+  component: LoginForm,
 };
 
-export const Default = () => (
-    <MockLoginProvider>
-        <LoginForm />
-    </MockLoginProvider>
-);
+export const Default = {};

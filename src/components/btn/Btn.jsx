@@ -1,5 +1,5 @@
-import styles from './Btn.module.css';
-import React from 'react';
+import styles from "./Btn.module.css";
+import React from "react";
 
 const Button = ({ text, onClick, icon, backgroundColor }) => {
   const buttonStyle = {
@@ -7,7 +7,12 @@ const Button = ({ text, onClick, icon, backgroundColor }) => {
   };
 
   return (
-    <button className={styles.submitBtn} style={buttonStyle} onClick={onClick}>
+    <button
+      type="submit"
+      className={styles.submitBtn}
+      style={buttonStyle}
+      onClick={onClick}
+    >
       {icon}
       {text}
     </button>
