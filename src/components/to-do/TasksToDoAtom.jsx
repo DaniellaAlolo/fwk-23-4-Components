@@ -1,5 +1,5 @@
 import TaskAtom from "./TaskAtom";
-import styles from "./ToDoBoard.module.css";
+import styles from "./TodoBoard.module.css";
 import { IoMdMore } from "react-icons/io";
 import React from 'react';
 
