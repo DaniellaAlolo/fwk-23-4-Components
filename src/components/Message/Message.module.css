@@ -1,0 +1,29 @@
+.messageContainer {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  padding: 10px;
+  gap: 70px;
+  align-items: center;
+  align-self: flex-start;
+
+}
+.messageWrapper{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.message {
+    word-wrap: break-word;
+    margin:0px 10px;
+    padding: 10px;
+}
+.aiAvatar {
+    border-radius: 100%;
+    background-color: rgb(67, 67, 67);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
