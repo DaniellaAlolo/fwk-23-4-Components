@@ -1,14 +1,14 @@
-import { Chat } from "./components/chat";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
-import { InputForm } from "./components/inputFormPrompts";
-import { Message } from "./components/message";
-import { Modal } from "./components/taskModal";
-import { Navbar } from "./components/navbar";
-import { RegisterForm } from "./components/registerForm";
-import { LoginForm } from "./components/login";
-import { Sidebar } from "./components/sidebar";
-import { TodoBoard } from "./components/to-do";
+import { Chat } from "./components/Chat";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { InputForm } from "./components/InputFormPrompts";
+import { Message } from "./components/Message";
+import { Modal } from "./components/TaskModal";
+import { Navbar } from "./components/Navbar";
+import { RegisterForm } from "./components/RegisterForm";
+import { LoginForm } from "./components/Login";
+import { Sidebar } from "./components/Sidebar";
+import { TodoBoard } from "./components/Todo";
 
 export {
   Chat,

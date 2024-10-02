@@ -3,8 +3,8 @@ import styles from "./LoginForm.module.css";
 import EmailAtom from "./EmailAtom.jsx";
 import PasswordAtom from "./PasswordAtom.jsx";
 import { MdLogin } from "react-icons/md";
-import Btn from "../btn/Btn";
-import LoginSidebar from "./LoginSidebar";
+import Btn from "../Btn/Btn.jsx";
+import LoginSidebar from "./LoginSidebar.jsx";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");

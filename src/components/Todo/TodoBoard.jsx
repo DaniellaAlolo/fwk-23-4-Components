@@ -4,8 +4,8 @@ import DoingAtom from "./DoingAtom";
 import DoneAtom from "./DoneAtom";
 import { MdOutlineModeEdit, MdAdd } from "react-icons/md";
 import React , { useRef, useState } from "react";
-import Modal from "../taskModal/Modal";
-import Btn from '../btn/Btn';
+import Modal from "../TaskModal/Modal";
+import Btn from '../Btn/Btn';
 import dummyTasks from "./dummyTasks.json";
 
 const TodoBoard = () => {

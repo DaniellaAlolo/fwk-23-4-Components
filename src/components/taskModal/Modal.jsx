@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import ModalForm from "./ModalFormAtom";
 import DropdownAtom from "./DropdownAtom";
 import RadioBtnAtom from "./RadioBtnAtom";
-import Btn from "../btn/Btn";
+import Btn from "../Btn/Btn";
 
 const Modal = forwardRef((props, ref) => {
   const dialogRef = useRef(null);

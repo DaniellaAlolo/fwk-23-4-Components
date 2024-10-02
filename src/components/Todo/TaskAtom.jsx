@@ -1,6 +1,6 @@
 import styles from "./TodoBoard.module.css";
 import React, { useState } from 'react';
-import Btn from '../btn/Btn'
+import Btn from '../Btn/Btn'
 
 const TaskAtom = ({ task, isEditing, editTask }) => {
     const taskClass =

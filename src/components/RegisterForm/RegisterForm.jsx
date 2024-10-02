@@ -4,8 +4,8 @@ import EmailAtom from "./EmailAtom";
 import PasswordAtom from "./PasswordAtom";
 import RegistrationStatus from "./RegistrationStatus";
 import { MdOutlineAccountCircle } from "react-icons/md";
-import LoginSidebar from "../login/LoginSidebar";
-import Btn from '../btn/Btn'
+import LoginSidebar from "../Login/LoginSidebar";
+import Btn from '../Btn/Btn'
 import React from 'react';
 
 const RegisterForm = ({
