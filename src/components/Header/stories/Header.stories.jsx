@@ -27,12 +27,12 @@ WithSubtitleExample3.args = {
 
 export const HeaderWithoutTitle = {
   args: {
-      subtitle: '',  
-  }  
+    title: "",
+  },
 };
 
 export const HeaderWithoutSubitle = {
   args: {
-      title: '',  
-  }  
+    subtitle: "",
+  },
 };
