@@ -18,26 +18,30 @@ const Chat = ({ onReceiveResponse, onSendMessage }) => {
         onSendMessage(input);
 
         try {
-            const response = await fetch('https://api-a6uj3err4a-uc.a.run.app/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ messages: [{ role: 'user', content: input }] }),
-            });
+            const response = await fetch(
+                "https://api-a6uj3err4a-uc.a.run.app/chat",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        messages: [{ user: input, response: "" }],
+                    }),
+                }
+            );
 
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
 
-            const responseText = await response.text(); 
-            const data = JSON.parse(responseText); 
-            const assistantResponse = data[0].generated_text;
+            const responseData = await response.json();
+            const assistantResponse = responseData.response;
 
-            onReceiveResponse(assistantResponse); 
-            setInput(""); 
+            onReceiveResponse(assistantResponse);
+            setInput("");
         } catch (error) {
-            console.error('Error sending message:', error);
+            console.error("Error sending message:", error);
         }
     };
 
