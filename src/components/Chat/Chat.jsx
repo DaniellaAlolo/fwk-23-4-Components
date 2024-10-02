@@ -5,7 +5,6 @@ import React, { useState, useRef } from "react";
 const Chat = ({ onReceiveResponse, onSendMessage }) => {
     const [input, setInput] = useState("");
     const textareaRef = useRef(null);
-    const [messages, setMessages] = useState([]);
 
     const handleInput = (e) => {
         const textarea = textareaRef.current;
@@ -16,9 +15,8 @@ const Chat = ({ onReceiveResponse, onSendMessage }) => {
 
     const sendMessage = async () => {
         if (!input.trim()) return;
-        
-        const newUserMessage = { role: "user", content: input };
-        setMessages((prev) => [...prev, newUserMessage]);
+
+        onSendMessage(input);
 
         try {
             const response = await fetch(
@@ -40,12 +38,8 @@ const Chat = ({ onReceiveResponse, onSendMessage }) => {
 
             const data = await response.json();
             const assistantResponse = data.response;
-            const newAssistantMessage = {
-                role: "assistant",
-                content: assistantResponse,
-            };
-            setMessages((prev) => [...prev, newAssistantMessage]);
 
+            onReceiveResponse(assistantResponse);
             setInput("");
         } catch (error) {
             console.error("Error sending message:", error);
