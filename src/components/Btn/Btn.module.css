@@ -1,0 +1,14 @@
+.submitBtn{
+    width: fit-content;
+    margin-left: auto;margin-right: auto;
+    border-radius: 8px;
+    padding: 6px 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px lightgray solid;
+    background-color: white;
+}
+.submitBtn:hover{
+    background-color: whitesmoke;
+}

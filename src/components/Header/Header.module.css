@@ -1,0 +1,204 @@
+/* Grundinställningar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #2C2C2C;
+    background-color: #F6F5F3;
+    /* Krämig bakgrundsfärg för en elegant touch */
+    padding: 20px;
+}
+
+/* Header */
+.headerContainer {
+    background: linear-gradient(135deg, #E3D7C6, #C9B7A2);
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #E4DBC8;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.headerRight {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    gap: 25px;
+}
+
+/* Titel och undertitel */
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #382f26;
+    margin-bottom: 10px;
+    animation: fadeIn 0.9s ease;
+}
+
+.subtitle {
+    font-size: 25px;
+    color: #62564c;
+    font-style: italic;
+    animation: fadeIn 0.9s ease;
+}
+
+/* Ikon */
+.icon {
+    font-size: 36px;
+    color: #6C584C;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.15);
+}
+
+/* Avatar */
+.avatarImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 3px solid #A38A6F;
+}
+
+.avatarImage:hover {
+    transform: scale(1.1);
+}
+
+/* Knapp */
+.button {
+    padding: 12px 25px;
+    border-radius: 50px;
+    background-color: #A38A6F;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #6C584C;
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #CCC;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.avatarCard {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatarCard:hover {
+    background-color: #EFEDE8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* AvatarDisplay Styling */
+.avatarDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(145deg, #f7f0e9, #e8e1db);
+    /* Elegant ljus beige ton */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.avatarDisplay:hover {
+    background-color: #f1eae2;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.avatarDisplay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.avatarDisplayImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #8b5e34;
+    /* Djup brun-orange för en lyxig touch */
+    object-fit: cover;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.avatarDisplayImg:hover {
+    transform: scale(1.1);
+    border-color: #6f451d;
+    /* Mörkare brun-orange vid hover */
+}
+
+.avatarDisplay span {
+    font-size: 18px;
+    color: #5a5a5a;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Användarnamn styling */
+.username {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4A3F35;
+    /* En mörk brun ton för ett sofistikerat utseende */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    /* Samma typsnitt för att matcha med titlarna */
+    letter-spacing: 1px;
+    /* Lätt ökning av bokstavsavstånd för elegans */
+}
+
+.username:hover {
+    color: #6C584C;
+    /* Färgförändring vid hover för interaktiv känsla */
+    transition: color 0.3s ease;
+}
