@@ -1,19 +1,18 @@
 .messageContainer {
   display: flex;
   flex-direction: row;
-  width: 20rem;
+  width: 60%;
   padding: 10px;
   gap: 70px;
   align-items: center;
-  border-radius: 8px;
-  background-color: rgb(188, 188, 188);
-  box-shadow: rgba(125, 125, 125, 0.197) 0px 0px 10px 2px;
+  align-self: flex-start;
+
 }
 .messageWrapper{
-  display: flex;
-  flex-direction: row;
   gap: 20px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .message {
     word-wrap: break-word;
@@ -23,8 +22,8 @@
 .aiAvatar {
     border-radius: 100%;
     background-color: rgb(67, 67, 67);
-    width: 3rem;
-    height: 3rem;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
 }

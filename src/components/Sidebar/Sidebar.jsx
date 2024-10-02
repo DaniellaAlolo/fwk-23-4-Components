@@ -12,7 +12,7 @@ const Sidebar = () => {
                     </a>
                 </li>
                 <li className={styles.sidebarItem}>
-                    <a href="#Login">
+                    <a href="/login">
                         <MdLogin size={20}/>
                         Login
                     </a>

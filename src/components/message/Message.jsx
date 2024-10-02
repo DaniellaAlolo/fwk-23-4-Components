@@ -1,18 +1,22 @@
 import AiAtom from "./AiAtom";
 import styles from "./message.module.css";
-import Btn from "../btn/Btn"
-import React from 'react';
-import { MdAdd } from "react-icons/md";
+import React from "react";
 
-
-const Message = () => {
+const Message = ({ messages }) => {
     return (
         <div className={styles.messageWrapper}>
-            <AiAtom />
-            <div className={styles.messageContainer}>
-                <p className={styles.message}>Api response</p>
-                <Btn icon={<MdAdd />}  text="Add Task"/>
-            </div>
+            {messages.map((msg, index) => (
+                <div key={index} className={styles.messageContainer}>
+                    {msg.type === 'user' ? (
+                        <p className={styles.userMessage}>{msg.text}</p>
+                    ) : (
+                        <>
+                            <AiAtom />
+                            <p className={styles.aiMessage}>{msg.text}</p>
+                        </>
+                    )}
+                </div>
+            ))}
         </div>
     );
 };

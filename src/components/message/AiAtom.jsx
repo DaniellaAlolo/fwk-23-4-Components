@@ -7,7 +7,7 @@ const AiAtom = () => {
         <div className={styles.aiAvatar}>
             <FaBrain
                 style={{ marginLeft: "auto", marginRight: "auto" }}
-                size={30}
+                size={20}
                 color="white"
             />
         </div>
