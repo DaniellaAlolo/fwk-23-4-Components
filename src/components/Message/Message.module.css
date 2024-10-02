@@ -5,6 +5,7 @@
     padding: 10px;
     gap: 20px;
     align-self: flex-start;
+    margin-left: auto;margin-right: auto;
 }
 .messageWrapper {
     gap: 20px;
