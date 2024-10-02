@@ -2,10 +2,10 @@ import styles from "./Chat.module.css";
 import SendBtn from "./SendBtn";
 import React, { useState, useRef } from "react";
 
-const Chat = () => {
+const Chat = ({ onReceiveResponse, onSendMessage }) => {
     const [input, setInput] = useState("");
-    const [messages, setMessages] = useState([]); 
     const textareaRef = useRef(null);
+    const [messages, setMessages] = useState([]);
 
     const handleInput = (e) => {
         const textarea = textareaRef.current;
@@ -16,8 +16,8 @@ const Chat = () => {
 
     const sendMessage = async () => {
         if (!input.trim()) return;
-
-        const newUserMessage = { role: 'user', content: input };
+        
+        const newUserMessage = { role: "user", content: input };
         setMessages((prev) => [...prev, newUserMessage]);
 
         try {
@@ -39,12 +39,14 @@ const Chat = () => {
             }
 
             const data = await response.json();
-            const assistantResponse = data.response; 
-
-            const newAssistantMessage = { role: 'assistant', content: assistantResponse };
+            const assistantResponse = data.response;
+            const newAssistantMessage = {
+                role: "assistant",
+                content: assistantResponse,
+            };
             setMessages((prev) => [...prev, newAssistantMessage]);
 
-            setInput(""); 
+            setInput("");
         } catch (error) {
             console.error("Error sending message:", error);
         }
@@ -53,15 +55,6 @@ const Chat = () => {
     return (
         <div className={styles.chatWrapper}>
             <div className={styles.chat}>
-                {/* Display chat messages */}
-                <div className={styles.chatMessages}>
-                    {messages.map((msg, index) => (
-                        <div key={index} className={msg.role === 'user' ? styles.userMessage : styles.assistantMessage}>
-                            <strong>{msg.role === 'user' ? 'You' : 'Assistant'}:</strong> {msg.content}
-                        </div>
-                    ))}
-                </div>
-
                 <textarea
                     ref={textareaRef}
                     name="promptText"
