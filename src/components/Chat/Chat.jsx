@@ -35,8 +35,8 @@ const Chat = ({ onReceiveResponse, onSendMessage }) => {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
 
-            const responseData = await response.json();
-            const assistantResponse = responseData.response;
+            const data = await response.json();
+            const assistantResponse = data.assistantResponse;
 
             onReceiveResponse(assistantResponse);
             setInput("");
