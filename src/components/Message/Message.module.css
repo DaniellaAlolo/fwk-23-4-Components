@@ -34,5 +34,6 @@
 }
 .end{
     display: flex;
-    justify-content: end;
+    align-items: end;
+    flex-direction: column;
 }
