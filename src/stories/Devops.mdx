@@ -14,3 +14,61 @@ Vi har skapat en pipeline som körs varje gång vi gör en push på main-grenen.
 - Pipelinen sparar oss tid och minskar risken för fel.
 - Behöver inte manuellt kolla versionsändringar eller publicera paketet själva.
 - Sker automatiskt, vilket gör det lättare att hålla koll på våra uppdateringar och informera hela teamet.
+
+## CI/CD Pipeline Konfiguration
+
+```yaml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+  workflow_dispatch:  
+
+jobs:
+  check-version-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: Check for version change
+        id: version_changed
+        uses: EndBug/version-check@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          diff-search: true 
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build component (if needed)
+        run: npm run build
+
+      - name: Publish to NPM
+        if: steps.version_changed.outputs.changed == 'true'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Notify Discord
+        if: steps.version_changed.outputs.changed == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_COMPONENTS }}
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          LIBRARY_NAME=$(jq -r '.name' package.json)
+          MESSAGE="Version $VERSION of $LIBRARY_NAME now published to npmjs."
+          curl -X POST -H "Content-Type: application/json" \
+          --data "{\\"content\\": \\"${MESSAGE}\\"}" \
+          $DISCORD_WEBHOOK_URL
