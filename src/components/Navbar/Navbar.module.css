@@ -1,6 +1,6 @@
 .navbar {
-    background-color: #425c76;
-    padding: 15px;
+    background-color: #d58774;
+    padding: 25px;
     display: flex;
     position: sticky;
     width: 100%;
@@ -9,14 +9,16 @@
   
   .navList {
     list-style-type: none;
-    margin: 0;
+    margin: 8;
     padding: 0;
     display: flex;
   }
   
   .navItem {
-    margin-right: 20px;
+    margin-right: 30px;
     background-color: white;
+    padding: 10px;
+    border-radius: 7px;
   }
   
   .navItem a {
