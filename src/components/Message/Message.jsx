@@ -1,5 +1,6 @@
 import AiAtom from "./AiAtom";
 import styles from "./Message.module.css";
+import AvatarAtom from "../Header/AvatarAtom"
 import React from "react";
 
 const Message = ({ messages }) => {
@@ -8,7 +9,10 @@ const Message = ({ messages }) => {
             {messages.map((msg, index) => (
                 <div key={index} className={styles.messageContainer}>
                     {msg.type === 'user' ? (
-                        <p className={styles.userMessage}>{msg.text}</p>
+                        <>
+                            <AvatarAtom />
+                            <p className={styles.userMessage}>{msg.text}</p>
+                        </>
                     ) : (
                         <>
                             <AiAtom />
