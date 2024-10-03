@@ -6,7 +6,8 @@ const LoginSidebar = () => {
         <div className={styles.sidebar}>
             <div className={styles.sidebarContent}>
                 <h1>Welcome to _______</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quidem tenetur, atque laudantium repudiandae saepe eveniet hic dignissimos natus placeat voluptate consequuntur praesentium, quo nostrum aliquam aspernatur adipisci mollitia dolorem!</p>
+                <p>Din AI-assistent för ökad produktivitet. Logga in för att komma igång!</p>
+
             </div>
         </div>
     );

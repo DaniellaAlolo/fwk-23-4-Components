@@ -24,7 +24,7 @@ const LoginForm = () => {
   return (
     <div className={styles.login}>
       <div className={styles.loginWrapper}>
-        <h1>AI APP NAME</h1>
+       
         <form className={styles.form}>
           <h2 className={styles.title}>Login</h2>
           <EmailAtom email={email} onEmailChange={setEmail} />
