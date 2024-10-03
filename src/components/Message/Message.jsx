@@ -9,10 +9,10 @@ const Message = ({ messages }) => {
             {messages.map((msg, index) => (
                 <div key={index} className={styles.messageContainer}>
                     {msg.type === 'user' ? (
-                        <>
+                        <div className={styles.end}>
                             <AvatarAtom />
                             <p className={styles.userMessage}>{msg.text}</p>
-                        </>
+                        </div>
                     ) : (
                         <>
                             <AiAtom />
