@@ -3,7 +3,7 @@
     width: fit-content;
     flex-direction: row;
     align-items: center;
-    height: 100px;
+    height: 80px;
     gap: 10px;
 }
 
@@ -22,7 +22,7 @@
     height: 85%;
     width: 100%;
     justify-content: space-evenly;
-    gap: 14px;
+    gap: 18px;
 }
 
 .columnTitle {
