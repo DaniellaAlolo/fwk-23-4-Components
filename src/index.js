@@ -1,4 +1,5 @@
 import { Chat } from "./components/Chat";
+import { CookieConsent } from "./components/CookieConsent"
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { InputForm } from "./components/InputFormPrompts";
@@ -12,6 +13,7 @@ import { TodoBoard } from "./components/Todo";
 
 export {
   Chat,
+  CookieConsent,
   Header,
   Footer,
   InputForm,
