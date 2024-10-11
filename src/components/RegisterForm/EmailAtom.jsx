@@ -1,10 +1,11 @@
-import styles from "./RegisterForm.module.css";
 import React from 'react';
+import styles from "./RegisterForm.module.css";
 
-const EmailAtom = ({ onEmailChange, value }) => {
+const EmailAtom = ({ onChange, value }) => {
   const handleEmailChange = (e) => {
-    onEmailChange(e.target.value);
+    onChange(e.target.value);
   };
+
   return (
     <div className={styles.formGroup}>
       <label className={styles.label} htmlFor="email">

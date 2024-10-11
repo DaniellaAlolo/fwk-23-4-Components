@@ -1,15 +1,13 @@
+import React from "react";
 import RegisterForm from "../RegisterForm";
-import useMockRegister from "../MockRegister";
+import MockRegister from "../MockRegister"; 
 
 export default {
   title: "Component/RegisterForm",
   component: RegisterForm,
 };
 
-export const Default = {};
-
-export const MockRegister = () => {
-  // Använd mockregister för att simulera beteendet
+export const Default = () => {
   const {
     userData,
     handleUserChange,
@@ -17,7 +15,8 @@ export const MockRegister = () => {
     handlePasswordChange,
     handleSubmit,
     registrationSuccess,
-  } = useMockRegister();
+    errorMessage,
+  } = MockRegister(); 
 
   return (
     <RegisterForm
@@ -27,6 +26,11 @@ export const MockRegister = () => {
       handlePasswordChange={handlePasswordChange}
       handleSubmit={handleSubmit}
       registrationSuccess={registrationSuccess}
+      errorMessage={errorMessage}
     />
   );
 };
+
+
+
+

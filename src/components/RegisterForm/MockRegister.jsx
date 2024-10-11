@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const useMockRegister = () => {
+const MockRegister = () => {
   const [userData, setUserData] = useState({
-    username: "",
-    email: "",
-    password: "",
+    username: '',
+    email: '',
+    password: '',
   });
 
-  //state för registeringsstatus (propagating)
-  const [registrationSuccess, setRegistrationSuccsess] = useState(false);
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // Lista för registrerade användare
+  const registeredUsers = useState([])[0];
 
   const handleUserChange = (username) => {
     setUserData((prevData) => ({ ...prevData, username }));
@@ -23,32 +26,31 @@ const useMockRegister = () => {
   };
 
   const handleSubmit = () => {
-    const testUsername = "testuser";
-    const testEmail = "user@user.com";
-    const testPassword = "testpassword";
+    // Kontrollerar om användarnamnet eller e-posten redan finns
+    const isUserRegistered = registeredUsers.some(
+      (user) =>
+        user.username === userData.username || user.email === userData.email
+    );
+    
 
-    if (
-      userData.username === testUsername &&
-      userData.email === testEmail &&
-      userData.password === testPassword
-    ) {
-      console.log("Submitting:", userData);
-      setRegistrationSuccsess(true); // Eller vad du nu vill göra
-      setRegistrationSuccsess(true);
-      console.log("Mock login successful!");
+    if (isUserRegistered) {
+      setRegistrationSuccess(false);
+      setErrorMessage("User with this username or email is already registered.");
+    } else if (userData.username && userData.email && userData.password) {
+
+
+      // Lägg till den nya användaren om registreringen är ny
+      registeredUsers.push({ ...userData });
+      setRegistrationSuccess(true);
+      setErrorMessage("");
+      console.log("Submission successful:", userData);
     } else {
-      setRegistrationSuccsess(false);
-      console.error("Mock login failed: Invalid username or password");
+      setRegistrationSuccess(false);
+      setErrorMessage("All fields are required.");
+      console.error("Submission failed: Missing fields");
     }
   };
-  console.log({
-    userData,
-    handleUserChange,
-    handleEmailChange,
-    handlePasswordChange,
-    handleSubmit,
-    registrationSuccess,
-  });
+
 
   return {
     userData,
@@ -57,7 +59,14 @@ const useMockRegister = () => {
     handlePasswordChange,
     handleSubmit,
     registrationSuccess,
+    errorMessage,
   };
 };
 
-export default useMockRegister;
+export default MockRegister;
+
+
+
+
+
+

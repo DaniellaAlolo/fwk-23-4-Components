@@ -1,35 +1,9 @@
-/*import styles from "./RegisterForm.module.css";
-
-const UsernameAtom = ({ onUserChange, value = "", label = "Username" }) => {
-  const handleUserChange = (e) => {
-    onUserChange(e.target.value);
-  };
-
-  return (
-    <div className={styles.formGroup}>
-      <label className={styles.label}>
-        {label}:
-        <input
-          className={styles.input}
-          type="text"
-          id="username"
-          onChange={handleUserChange}
-          value={value}
-          placeholder="Enter usernamne"
-        />
-      </label>
-    </div>
-  );
-};
-
-export default UsernameAtom;
-*/
-import styles from "./RegisterForm.module.css";
 import React from 'react';
+import styles from "./RegisterForm.module.css";
 
-const UsernameAtom = ({ onUserChange, value }) => {
+const UsernameAtom = ({ onChange, value }) => {
   const handleChange = (e) => {
-    onUserChange(e.target.value);
+    onChange(e.target.value);
   };
 
   return (
@@ -48,4 +22,6 @@ const UsernameAtom = ({ onUserChange, value }) => {
     </div>
   );
 };
+
 export default UsernameAtom;
+

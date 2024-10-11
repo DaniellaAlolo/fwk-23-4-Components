@@ -1,9 +1,9 @@
+import React from "react";
 import styles from "./RegisterForm.module.css";
-import React from 'react';
 
-const PasswordAtom = ({ onPasswordChange, value }) => {
+const PasswordAtom = ({ onChange, value }) => {
   const handlePasswordChange = (e) => {
-    onPasswordChange(e.target.value);
+    onChange(e.target.value);
   };
 
   return (
@@ -18,9 +18,10 @@ const PasswordAtom = ({ onPasswordChange, value }) => {
         name="password"
         onChange={handlePasswordChange}
         value={value}
-        placeholder="Enter passowrd"
+        placeholder="Enter password"
       />
     </div>
   );
 };
+
 export default PasswordAtom;
