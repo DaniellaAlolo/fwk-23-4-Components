@@ -1,48 +1,41 @@
 import React from "react";
 import styles from "./RegisterForm.module.css";
-import UsernameAtom from "./UsernameAtom";
-import EmailAtom from "./EmailAtom";
-import PasswordAtom from "./PasswordAtom";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import LoginSidebar from "../Login/LoginSidebar";
 import Btn from "../Btn/Btn";
+import { useAuth, EmailAtom, PasswordAtom } from "../../hooks/auth";
 
-const RegisterForm = ({
-  userData = {}, // Default-värde
-  handleUserChange,
-  handleEmailChange,
-  handlePasswordChange,
-  handleSubmit,
-  registrationSuccess,
-  errorMessage,
-}) => {
-  const handleFormSubmit = (e) => {
-    e.preventDefault(); // Förhindra sidladdning
-    console.log("Form submitted"); // Debugging
-    handleSubmit(); 
+const RegisterForm = () => {
+  const { email, password, message, setEmail, setPassword, handleLoginClick } =
+    useAuth();
+
+  // Här kan du anpassa handleLoginClick eller skapa en ny funktion för registrering
+  const handleRegisterClick = () => {
+    // Använd samma login-logik eller modifiera för registrering
+    handleLoginClick();
   };
 
   return (
     <div className={styles.register}>
       <div className={styles.registerWrapper}>
         <h1>AI APP NAME</h1>
-        <form className={styles.form} onSubmit={handleFormSubmit}>
+        <form className={styles.form}>
           <h2 className={styles.title}>Register</h2>
-          <UsernameAtom onChange={handleUserChange} value={userData.username} />
-          <EmailAtom onChange={handleEmailChange} value={userData.email} />
-          <PasswordAtom
-            onChange={handlePasswordChange}
-            value={userData.password}
-          />
+          <EmailAtom email={email} onEmailChange={setEmail} />
+          <PasswordAtom password={password} onPasswordChange={setPassword} />
           <Btn
             text="Register"
             icon={<MdOutlineAccountCircle />}
-            onClick={handleFormSubmit}
+            onClick={handleRegisterClick} // Använd registreringslogiken här
           />
-          {registrationSuccess ? (
-            <p style={{ color: "green" }}>Registration Successful!</p>
-          ) : (
-            <p style={{ color: "red" }}>{errorMessage}</p>
+          {message && (
+            <p
+              className={`${styles.message} ${
+                message.includes("successful") ? styles.success : styles.error
+              }`}
+            >
+              {message}
+            </p>
           )}
         </form>
         <a href="login">Already have an account? Go to login</a>
