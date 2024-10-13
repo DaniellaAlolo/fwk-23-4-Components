@@ -48,10 +48,10 @@
     background-color: white;
     flex-direction: row;
     overflow: hidden;
-    height: 40px;
+    height: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 10px;
+
 }
 
 

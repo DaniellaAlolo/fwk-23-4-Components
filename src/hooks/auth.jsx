@@ -1,30 +1,48 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import EmailAtom from "../components/Login/EmailAtom";
 import PasswordAtom from "../components/Login/PasswordAtom";
 
 export const useAuth = () => {
-  const [email, setEmail] = useState("");
+  const [users, setUsers] = useState([
+    { email: "user@test.com", password: "password" },
+  ]);
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  // Handle login logic
+  const handleLoginClick = (email, password) => {
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
 
-  const handleLoginClick = () => {
-    if (email === "user@test.com" && password === "password") {
-      console.log("Login successful");
+    if (user) {
       setMessage("Login successful");
     } else {
-      console.log("login failed.");
       setMessage("Login failed. Try again");
+    }
+  };
+  // Handle registration logic
+  const handleRegisterClick = (email, password) => {
+    // Kontrollera om e-postadressen redan är registrerad
+    const userExists = users.some((u) => u.email === email);
+
+    if (userExists) {
+      setMessage("Registration failed. Email already in use.");
+    } else {
+      // Lägg till den nya användaren
+      setUsers([...users, { email, password }]);
+      setMessage("Registration successful");
     }
   };
 
   return {
-    email,
+    users,
     password,
     message,
-    setEmail,
+    setUsers,
     setPassword,
     setMessage,
     handleLoginClick,
+    handleRegisterClick,
   };
 };
 

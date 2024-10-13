@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
 import { MdLogin } from "react-icons/md";
 import Btn from "../Btn/Btn.jsx";
@@ -6,8 +6,9 @@ import LoginSidebar from "./LoginSidebar.jsx";
 import { useAuth, EmailAtom, PasswordAtom } from "../../hooks/auth.jsx";
 
 const LoginForm = () => {
-  const { email, password, message, setEmail, setPassword, handleLoginClick } =
-    useAuth();
+  const { message, handleLoginClick } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className={styles.login}>
@@ -20,7 +21,7 @@ const LoginForm = () => {
             text="Login"
             type="submit"
             icon={<MdLogin />}
-            onClick={handleLoginClick}
+            onClick={() => handleLoginClick(email, password)}
           />
           {message && (
             <p

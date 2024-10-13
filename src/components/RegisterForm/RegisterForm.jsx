@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./RegisterForm.module.css";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import LoginSidebar from "../Login/LoginSidebar";
@@ -6,13 +6,13 @@ import Btn from "../Btn/Btn";
 import { useAuth, EmailAtom, PasswordAtom } from "../../hooks/auth";
 
 const RegisterForm = () => {
-  const { email, password, message, setEmail, setPassword, handleLoginClick } =
-    useAuth();
+  const { message, handleRegisterClick } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // Här kan du anpassa handleLoginClick eller skapa en ny funktion för registrering
-  const handleRegisterClick = () => {
-    // Använd samma login-logik eller modifiera för registrering
-    handleLoginClick();
+  const handleRegister = (e) => {
+    e.preventDefault(); // Förhindra standardinlämningen av formuläret
+    handleRegisterClick(email, password); // Skicka email och password som argument
   };
 
   return (
@@ -26,7 +26,7 @@ const RegisterForm = () => {
           <Btn
             text="Register"
             icon={<MdOutlineAccountCircle />}
-            onClick={handleRegisterClick} // Använd registreringslogiken här
+            onClick={handleRegister} // Använd registreringslogiken här
           />
           {message && (
             <p
