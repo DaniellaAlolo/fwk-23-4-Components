@@ -1,4 +1,4 @@
-import styles from "./LoginForm.module.css";
+import styles from "../Login/LoginForm.module.css";
 import React, { useState } from "react";
 import { IoKeyOutline } from "react-icons/io5";
 

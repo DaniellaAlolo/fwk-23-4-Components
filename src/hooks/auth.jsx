@@ -1,6 +1,5 @@
 import { useState } from "react";
-import EmailAtom from "../components/Login/EmailAtom";
-import PasswordAtom from "../components/Login/PasswordAtom";
+import { EmailAtom, PasswordAtom } from "../components/Atoms";
 
 export const useAuth = () => {
   const [users, setUsers] = useState([

@@ -1,4 +1,4 @@
-import styles from "./LoginForm.module.css";
+import styles from "../Login/LoginForm.module.css";
 import { MdAlternateEmail } from "react-icons/md";
 import React from "react";
 

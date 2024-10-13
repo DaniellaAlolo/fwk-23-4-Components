@@ -3,7 +3,8 @@ import styles from "./LoginForm.module.css";
 import { MdLogin } from "react-icons/md";
 import Btn from "../Btn/Btn.jsx";
 import LoginSidebar from "./LoginSidebar.jsx";
-import { useAuth, EmailAtom, PasswordAtom } from "../../hooks/auth.jsx";
+import { EmailAtom, PasswordAtom } from "../Atoms";
+import { useAuth } from "../../hooks/auth.jsx";
 
 const LoginForm = () => {
   const { message, handleLoginClick } = useAuth();

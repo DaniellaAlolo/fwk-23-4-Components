@@ -3,7 +3,8 @@ import styles from "./RegisterForm.module.css";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import LoginSidebar from "../Login/LoginSidebar";
 import Btn from "../Btn/Btn";
-import { useAuth, EmailAtom, PasswordAtom } from "../../hooks/auth";
+import { EmailAtom, PasswordAtom } from "../Atoms";
+import { useAuth } from "../../hooks/auth";
 
 const RegisterForm = () => {
   const { message, handleRegisterClick } = useAuth();
