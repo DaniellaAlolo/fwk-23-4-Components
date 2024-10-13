@@ -1,30 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./LoginForm.module.css";
-import EmailAtom from "./EmailAtom.jsx";
-import PasswordAtom from "./PasswordAtom.jsx";
 import { MdLogin } from "react-icons/md";
 import Btn from "../Btn/Btn.jsx";
 import LoginSidebar from "./LoginSidebar.jsx";
+import { useAuth, EmailAtom, PasswordAtom } from "../../hooks/auth.jsx";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleLoginClick = () => {
-    if (email === "user@test.com" && password === "password") {
-      console.log("Login successful");
-      setMessage("Login successful");
-    } else {
-      console.log("login failed.");
-      setMessage("Login failed. Try again");
-    }
-  };
+  const { email, password, message, setEmail, setPassword, handleLoginClick } =
+    useAuth();
 
   return (
     <div className={styles.login}>
       <div className={styles.loginWrapper}>
-       
         <form className={styles.form}>
           <h2 className={styles.title}>Login</h2>
           <EmailAtom email={email} onEmailChange={setEmail} />
@@ -50,4 +37,5 @@ const LoginForm = () => {
     </div>
   );
 };
+
 export default LoginForm;

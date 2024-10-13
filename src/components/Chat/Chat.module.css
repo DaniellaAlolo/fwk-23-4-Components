@@ -1,9 +1,10 @@
-.chat{
+.chat {
     display: flex;
     flex: 1 1 0%;
     flex-direction: column;
 }
-#promptText{
+
+#promptText {
     height: 40px;
     padding: 6px;
     margin: 0;
@@ -15,8 +16,8 @@
     font-size: 1.4rem;
     overflow: hidden;
 }
-  
-.chatWrapper{
+
+.chatWrapper {
     display: flex;
     max-height: 200px;
     flex-direction: row;
@@ -28,17 +29,20 @@
     background-color: rgb(188, 188, 188);
     box-shadow: rgba(125, 125, 125, 0.197) 0px 0px 10px 2px;
 }
-.sendBtn{
+
+.sendBtn {
     border-radius: 9999px;
-    width: 3rem;height: 3rem;
+    width: 3rem;
+    height: 3rem;
     background-color: rgb(67, 67, 67);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     align-self: flex-end;
-    transition: filter 0.3s ease, background-color 0.3s ease; 
+    transition: filter 0.3s ease, background-color 0.3s ease;
 }
-.sendBtn:hover{
+
+.sendBtn:hover {
     filter: brightness(140%);
 }
