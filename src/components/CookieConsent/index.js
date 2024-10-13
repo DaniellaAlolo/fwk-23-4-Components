@@ -1,3 +1,3 @@
-import Coockiconsent from "./CookieConsent";
+import CookieConsent from "./CookieConsent";
 
-export { Coockiconsent };
+export { CookieConsent };
