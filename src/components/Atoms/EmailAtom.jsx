@@ -21,6 +21,7 @@ const EmailAtom = ({ email, onEmailChange, label = "Email" }) => {
           type="email"
           id="login-email"
           name="email"
+          required
         />
       </div>
     </div>

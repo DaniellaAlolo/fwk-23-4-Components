@@ -27,6 +27,7 @@ const PasswordAtom = ({ password, onPasswordChange, label = "Password" }) => {
           onChange={handleChange}
           id="login-password"
           name="password"
+          required
         />
       </div>
       <div>
