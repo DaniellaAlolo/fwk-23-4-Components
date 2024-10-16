@@ -7,6 +7,7 @@ const ThemePicker = () => {
 
     const applyTheme = (themeName) => {
         const theme = themes[themeName];
+        console.log(theme);
         if (theme) {
             Object.keys(theme).forEach(key => {
                 document.documentElement.style.setProperty(key, theme[key]);

@@ -6,10 +6,10 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    border: 1px lightgray solid;
-    background-color: white;
+    border: 1px var(--border) solid;
+    background-color: var(--primary);
     transition: background-color 0.3s ease,  0.3s ease; 
 }
 .submitBtn:hover {
-    background-color: lightGrey !important;
+    background-color: var(--secondary) !important;
 }

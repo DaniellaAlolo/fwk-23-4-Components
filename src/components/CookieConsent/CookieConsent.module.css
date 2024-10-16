@@ -1,6 +1,6 @@
 .cookiebar{
     width: 100%;
-    background-color: aliceblue;
+    background-color: var(--primary);
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -30,7 +30,7 @@ p{
 .cookieBtn2{
     height: fit-content;width: fit-content;
     padding: 10px 14px;
-    border: #363636cc 1px solid;
+    border: var(--border) 1px solid;
     background-color: transparent;
     transition: background-color 0.4s ease,  0.4s ease; 
 }
@@ -42,6 +42,6 @@ p{
 }
 .cookieBtn1:hover,
 .cookieBtn2:hover{
-    background-color: rgb(202, 230, 255);
+    background-color: var(--secondary);
     color: black;
 }

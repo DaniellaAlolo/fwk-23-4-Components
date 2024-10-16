@@ -1,7 +1,8 @@
 import ThemePicker from "./ThemePicker";
+
 export default {
-  title: 'Component/ThemePicker',
-  component: ThemePicker,
+    title: "Component/ThemePicker",
+    component: ThemePicker,
 };
-const Template = (args) => <ThemePicker {...args} />;
-export const Default = Template.bind({});
+
+export const Default = {};

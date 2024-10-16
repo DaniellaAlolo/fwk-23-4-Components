@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #d58774;
+    background-color: var(--primary);
     padding: 25px;
     display: flex;
     position: sticky;

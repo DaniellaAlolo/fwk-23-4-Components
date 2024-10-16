@@ -26,7 +26,7 @@
 }
 
 .columnTitle {
-    background-color: rgb(221, 221, 221);
+    background-color: var(--accent);
     display: flex;
     flex-direction: row;
     height: 44px;
@@ -50,7 +50,7 @@
 .done {
     height: 100%;
     display: grid;
-    background-color: rgb(221, 221, 221);
+    background-color: var(--primary);
     grid-template-columns: repeat(2, 1fr);
     width: fit-content;
     max-width: 26rem;

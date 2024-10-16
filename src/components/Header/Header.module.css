@@ -8,19 +8,19 @@
 body {
     font-family: 'Playfair Display', serif;
     color: #2C2C2C;
-    background-color: #F6F5F3;
+    background-color: var(--primary);
     /* Krämig bakgrundsfärg för en elegant touch */
     padding: 20px;
 }
 
 /* Header */
 .headerContainer {
-    background: linear-gradient(135deg, #E3D7C6, #C9B7A2);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     padding: 30px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #E4DBC8;
+    border-bottom: 3px solid var(--border);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -42,14 +42,14 @@ body {
 .title {
     font-size: 40px;
     font-weight: 700;
-    color: #382f26;
+    color: var(--accent);
     margin-bottom: 10px;
     animation: fadeIn 0.9s ease;
 }
 
 .subtitle {
     font-size: 25px;
-    color: #62564c;
+    color: var(--accent);
     font-style: italic;
     animation: fadeIn 0.9s ease;
 }
@@ -57,7 +57,7 @@ body {
 /* Ikon */
 .icon {
     font-size: 36px;
-    color: #6C584C;
+    color: var(--accent);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -73,7 +73,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    border: 3px solid #A38A6F;
+    border: 3px solid var(--border);
 }
 
 .avatarImage:hover {
@@ -84,7 +84,7 @@ body {
 .button {
     padding: 12px 25px;
     border-radius: 50px;
-    background-color: #A38A6F;
+    background-color: var(--secondary);
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -92,7 +92,7 @@ body {
 }
 
 .button:hover {
-    background-color: #6C584C;
+    background-color: var(--primary);
 }
 
 /* Dropdown */
@@ -198,7 +198,7 @@ body {
 }
 
 .username:hover {
-    color: #6C584C;
+    color: var(--accent);
     /* Färgförändring vid hover för interaktiv känsla */
     transition: color 0.3s ease;
 }

@@ -1,5 +1,5 @@
 .modal {
-    border: 1px solid rgba(127, 127, 127, 0.523);
+    border: 1px solid var(--border);
     border-radius: 8px;
     display: none;
     position: absolute;
@@ -47,7 +47,7 @@ fieldset {
 select {
     padding: 5px;
     background-color: transparent;
-    border: 1px solid rgba(127, 127, 127, 0.523);
+    border: 1px solid var(--border);
 }
 textarea {
     resize: none;
