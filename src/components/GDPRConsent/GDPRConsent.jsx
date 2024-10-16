@@ -1,5 +1,5 @@
 import styles from "../RegisterForm/RegisterForm.module.css";
-import React from 'react';
+import React from "react";
 
 const GDPRConsent = ({ onConsentChange, isChecked }) => {
   const handleConsentChange = (e) => {

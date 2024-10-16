@@ -1,5 +1,5 @@
 import styles from "./CookieConsent.module.css";
-import React from 'react';
+import React from "react";
 
 const CookieConsent = () => {
 
