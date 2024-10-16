@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ThemePicker.module.css";
-import { themes } from "./Themes";
-const ThemePicker = () => {
-    const [selectedTheme, setSelectedTheme] = useState("light"); 
+import { themes } from "./Themes"; 
+
+const ThemePicker = ({ onThemeChange }) => {
+    const [selectedTheme, setSelectedTheme] = useState("light");
+
     useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        console.log(savedTheme);
-        if (savedTheme && themes[savedTheme]) {
-            setSelectedTheme(savedTheme);
-        }
-        applyTheme(selectedTheme); 
-    }, []); 
-    const applyTheme = (themeName) => {
-        const theme = themes[themeName];
-        Object.keys(theme).forEach((key) => {
-            document.documentElement.style.setProperty(key, theme[key]);
-        });
-    };
+        const savedTheme = localStorage.getItem("theme") || "light";
+        setSelectedTheme(savedTheme);
+        onThemeChange(savedTheme); 
+    }, [onThemeChange]);
+    
+
     const handleThemeChange = (themeName) => {
         setSelectedTheme(themeName);
         localStorage.setItem("theme", themeName);
+        onThemeChange(themeName); 
     };
+
     return (
         <div className="themeWrapper">
             <h2>Select new theme</h2>
@@ -37,4 +34,5 @@ const ThemePicker = () => {
         </div>
     );
 };
+
 export default ThemePicker;
