@@ -1,14 +1,14 @@
 import styles from "./Btn.module.css";
 import React from "react";
 
-const Button = ({ text, onClick, icon, backgroundColor }) => {
+const Button = ({ text, onClick, icon, backgroundColor, type = "button" }) => {
   const buttonStyle = {
     backgroundColor: backgroundColor,
   };
 
   return (
     <button
-      type="button"
+      type={type}
       className={styles.submitBtn}
       style={buttonStyle}
       onClick={onClick}
