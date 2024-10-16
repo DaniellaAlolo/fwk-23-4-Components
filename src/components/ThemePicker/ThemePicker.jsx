@@ -2,20 +2,28 @@ import React, { useState, useEffect } from "react";
 import styles from "./ThemePicker.module.css";
 import { themes } from "./Themes"; 
 
-const ThemePicker = ({ onThemeChange }) => {
+const ThemePicker = () => {
     const [selectedTheme, setSelectedTheme] = useState("light");
+
+    const applyTheme = (themeName) => {
+        const theme = themes[themeName];
+        if (theme) {
+            Object.keys(theme).forEach(key => {
+                document.documentElement.style.setProperty(key, theme[key]);
+            });
+        }
+    };
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme") || "light";
         setSelectedTheme(savedTheme);
-        onThemeChange(savedTheme); 
-    }, [onThemeChange]);
-    
+        applyTheme(savedTheme); 
+    }, []); 
 
     const handleThemeChange = (themeName) => {
         setSelectedTheme(themeName);
         localStorage.setItem("theme", themeName);
-        onThemeChange(themeName); 
+        applyTheme(themeName); 
     };
 
     return (
