@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./themePicker.module.css";
+import styles from "./ThemePicker.module.css";
 import { themes } from "./Themes";
 const ThemePicker = () => {
     const [selectedTheme, setSelectedTheme] = useState("light"); 
