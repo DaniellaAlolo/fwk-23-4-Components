@@ -1,5 +1,6 @@
 import { Chat } from "./components/Chat";
 import { CookieConsent } from "./components/CookieConsent"
+import { DataRequest } from "./components/DataRequest";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { InputForm } from "./components/InputFormPrompts";
@@ -15,6 +16,7 @@ import { ThemePicker } from "./components/ThemePicker"
 export {
   Chat,
   CookieConsent,
+  DataRequest,
   Header,
   Footer,
   InputForm,

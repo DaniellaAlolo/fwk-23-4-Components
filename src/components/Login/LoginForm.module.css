@@ -20,10 +20,6 @@
     color: var(--primary); 
 }
 
-h1, p { 
-    color: var(--primary);
-}
-
 .formGroup {
     margin-bottom: 15px;
 }
@@ -97,16 +93,6 @@ h1, p {
     padding: 40px;
     text-align: center;
     color: white;
-}
-
-a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-
-h1 {
-    padding-bottom: 40px;
-    color: var(--primary); 
 }
 
 .message {

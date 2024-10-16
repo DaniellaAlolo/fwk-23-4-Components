@@ -20,7 +20,7 @@ const Chat = ({ onReceiveResponse, onSendMessage }) => {
 
         try {
             const response = await fetch(
-                "https://api-a6uj3err4a-uc.a.run.app/chat",
+                "https://api-a6uj3err4a-ew.a.run.app/chat",
                 {
                     method: "POST",
                     headers: {
