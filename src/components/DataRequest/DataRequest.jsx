@@ -1,6 +1,7 @@
 import Btn from "../Btn/Btn"
 import { FiDatabase } from "react-icons/fi";
 import styles from "./DataRequest.module.css"
+import React from "react";
 
 const DataRequest = () => {
 
