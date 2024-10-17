@@ -52,7 +52,6 @@ const RegisterForm = () => {
   return (
     <div className={styles.register}>
       <div className={styles.registerWrapper}>
-        <h1>AI APP NAME</h1>
         <form className={styles.form}>
           <h2 className={styles.title}>Register</h2>
           <EmailAtom email={email} onEmailChange={setEmail} />
@@ -78,7 +77,7 @@ const RegisterForm = () => {
             </p>
           )}
         </form>
-        <a href="login">Already have an account? Go to login</a>
+        <a className={styles.link} href="login">Already have an account? Go to login</a>
       </div>
       <LoginSidebar />
     </div>
