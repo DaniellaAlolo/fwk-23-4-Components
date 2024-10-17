@@ -36,7 +36,7 @@ export const useTheme = () => {
     const applyTheme = (themeName) => {
         const theme = themes[themeName];
         if (theme) {
-            Object.keys(theme).forEach(key => {
+            Object.keys(theme).forEach((key) => {
                 document.documentElement.style.setProperty(key, theme[key]);
             });
         }
