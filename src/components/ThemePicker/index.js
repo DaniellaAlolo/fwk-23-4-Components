@@ -1,2 +1,3 @@
 import ThemePicker from "./ThemePicker"
-export { ThemePicker }
+import useTheme from "./Themes"; 
+export { ThemePicker,useTheme };

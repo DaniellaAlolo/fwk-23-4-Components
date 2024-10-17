@@ -11,7 +11,8 @@ import { RegisterForm } from "./components/RegisterForm";
 import { LoginForm } from "./components/Login";
 import { Sidebar } from "./components/Sidebar";
 import { TodoBoard } from "./components/Todo";
-import { ThemePicker } from "./components/ThemePicker"
+import { ThemePicker } from "./components/ThemePicker";
+import { useTheme } from "./components/ThemePicker"
 
 export {
   Chat,
@@ -28,4 +29,5 @@ export {
   Sidebar,
   TodoBoard,
   ThemePicker,
+  useTheme,
 };
