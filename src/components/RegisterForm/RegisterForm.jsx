@@ -28,17 +28,17 @@ const RegisterForm = () => {
 
     // Manuell validering av email och samtycke
     if (!email) {
-      setMessage("Email-fältet får inte vara tomt!"); // Uppdatera message
+      setMessage("Email-fältet får inte vara tomt!");
       return;
     }
 
     if (!password) {
-      setMessage("Password-fältet får inte vara tomt!"); // Uppdatera message
+      setMessage("Password-fältet får inte vara tomt!");
       return;
     }
 
     if (!consentGiven) {
-      setMessage("Du måste godkänna att vi lagrar dina uppgifter!"); // Uppdatera message
+      setMessage("Du måste godkänna att vi lagrar dina uppgifter!");
       return;
     }
 
