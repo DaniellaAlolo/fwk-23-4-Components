@@ -16,7 +16,7 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       // Skicka POST-anrop till din backend
-      const response = await axios.post("http://localhost:3000/login", {
+      const response = await axios.post("http://localhost:3000/api/auth/login", {
         email,
         password,
       });
