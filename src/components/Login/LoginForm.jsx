@@ -4,11 +4,11 @@ import { MdLogin } from "react-icons/md";
 import Btn from "../Btn/Btn.jsx";
 import LoginSidebar from "./LoginSidebar.jsx";
 import { EmailAtom, PasswordAtom } from "../Atoms";
-import { useAuth } from "../../hooks/auth.jsx";
+
 import axios from "axios";
 
 const LoginForm = () => {
-  const { message, setMessage } = useAuth();
+  const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,10 +16,13 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       // Skicka POST-anrop till din backend
-      const response = await axios.post("http://localhost:3000/api/auth/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:3000/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
 
       if (response.status === 200) {
         setMessage("Login successful");
