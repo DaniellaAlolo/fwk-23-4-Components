@@ -4,7 +4,6 @@ import { MdLogin } from "react-icons/md";
 import Btn from "../Btn/Btn.jsx";
 import LoginSidebar from "./LoginSidebar.jsx";
 import { EmailAtom, PasswordAtom } from "../Atoms";
-import axios from "axios";
 import { Header } from "../Header";
 
 const LoginForm = () => {
@@ -16,27 +15,30 @@ const LoginForm = () => {
 
   const handleLoginClick = async (e) => {
     e.preventDefault();
-    try {
-      // Skicka POST-anrop till din backend
-      const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
-        { email, password },
-        { withCredentials: true } // för att skicka med cookies i förfrågan
-      );
 
-      if (response.status === 200) {
-        const accessToken = response.data.accessToken;
-        console.log("lyckad login", accessToken);
-        setMessage("Login successful");
+    try {
+      const response = await fetch('http://localhost:3000/api/auth/login', {
+        method: 'POST',
+        credentials: 'include',  // for sending cookies
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const accessToken = data.accessToken;
+        setMessage('Login successful');
         setToken(accessToken);
         setIsLoggedIn(true);
-        document.cookie = `accessToken=${accessToken}; path=/`; // Sparar token i en cookie TA BORT DENNA
+      } else {
+        throw new Error('Login failed');
       }
     } catch (error) {
-      console.log("misslyckad loggin", setToken);
-      setMessage("Login failed. Try again");
+      console.error('Login failed', error);
+      setMessage('Login failed. Try again');
     }
   };
+
 
   if (isLoggedIn) {
     return <Header token={token} />;

@@ -5,7 +5,6 @@ import LoginSidebar from "../Login/LoginSidebar";
 import Btn from "../Btn/Btn";
 import { EmailAtom, PasswordAtom } from "../Atoms";
 import { GDPRConsent } from "../GDPRConsent";
-import axios from "axios";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
@@ -43,21 +42,28 @@ const RegisterForm = () => {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/auth/register",
-        {
+      const response = await fetch("http://localhost:3000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           email,
           password,
-        }
-      );
+        }),
+      });
 
-      if (response.status === 200) {
+      if (response.ok) {
         setMessage("Registrering lyckades!");
+      } else {
+        setMessage("Registreringen misslyckades. Försök igen.");
       }
     } catch (error) {
+      console.error("Error:", error);
       setMessage("Registreringen misslyckades. Försök igen.");
     }
   };
+
   return (
     <div className={styles.register}>
       <div className={styles.registerWrapper}>
