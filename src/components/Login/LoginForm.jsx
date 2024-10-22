@@ -21,7 +21,7 @@ const LoginForm = () => {
       const response = await axios.post(
         "http://localhost:3000/api/auth/login",
         { email, password },
-        { withCredentials: true } // för att skicka med cookies
+        { withCredentials: true } // för att skicka med cookies i förfrågan
       );
 
       if (response.status === 200) {
@@ -30,6 +30,7 @@ const LoginForm = () => {
         setMessage("Login successful");
         setToken(accessToken);
         setIsLoggedIn(true);
+        document.cookie = `accessToken=${accessToken}; path=/`; // Sparar token i en cookie TA BORT DENNA
       }
     } catch (error) {
       console.log("misslyckad loggin", setToken);
