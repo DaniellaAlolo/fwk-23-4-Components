@@ -1,6 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-// skapar context för att hantera login-state och funktionaltet
 export const FakeLoginContext = createContext({
   isLoggedIn: false,
   loading: false,
@@ -12,17 +11,19 @@ export const FakeLoginContext = createContext({
 export const FakeLoginProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const login = (email, password) => {
-    console.log(`lyckad login med ${email} & ${password} med fakelogin`);
+  const login = (username, password) => {
+    console.log(
+      `Successful Login attempted with username: ${username} and password: ${password}`
+    );
     setIsLoggedIn(true);
   };
 
   const logout = () => {
-    console.log("lyckad utloggning");
+    console.log("Successful Logout attempted");
     setIsLoggedIn(false);
   };
 
-  const contextProvider = {
+  const contextValue = {
     isLoggedIn: isLoggedIn,
     loading: false,
     error: null,
@@ -31,7 +32,7 @@ export const FakeLoginProvider = ({ children }) => {
   };
 
   return (
-    <FakeLoginContext.Provider value={contextProvider}>
+    <FakeLoginContext.Provider value={contextValue}>
       {children}
     </FakeLoginContext.Provider>
   );
