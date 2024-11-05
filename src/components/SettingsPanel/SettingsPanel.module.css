@@ -1,0 +1,10 @@
+.settingsWrapper {
+    background-color: var(--primary);
+    padding: 1em;
+}
+
+.settingsManagement {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

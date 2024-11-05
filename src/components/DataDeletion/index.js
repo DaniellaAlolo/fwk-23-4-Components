@@ -1,2 +1,2 @@
-import AccountDeletion from "./AccountDeletion";
+import AccountDeletion from "./DataDeletion";
 export { AccountDeletion };
