@@ -48,7 +48,7 @@ const RegisterForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/register", {
+      const response = await fetch("http://localhost:3002/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,6 +57,7 @@ const RegisterForm = () => {
           email,
           username,
           password,
+          role: "user"
         }),
       });
 
@@ -90,9 +91,8 @@ const RegisterForm = () => {
           />
           {message && (
             <p
-              className={`${styles.message} ${
-                message.includes("lyckades") ? styles.success : styles.error
-              }`}
+              className={`${styles.message} ${message.includes("lyckades") ? styles.success : styles.error
+                }`}
             >
               {message} {/* Använd message istället för message */}
             </p>
