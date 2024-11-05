@@ -25,13 +25,14 @@ const DataRequest = () => {
             console.error("Error fetching data:", error);
         }
     };
-    
-    return ( 
-        <div className={styles.dataRequest}>
-            <h2>Request data copy</h2>
-            <Btn icon={<FiDatabase />} text={"Download data"} onClick={handleDataRequest}/>
+
+    return (
+        <div className={styles.wrapper}>
+            <h3>Request data copy</h3>
+            <p>Request a PDF-copy of your saved user information. Click below to download your user information in PDF-format.</p>
+            <Btn icon={<FiDatabase />} text={"Download data"} onClick={handleDataRequest} backgroundColor={"lightGreen"} />
         </div>
-     );
+    );
 }
- 
+
 export default DataRequest;
