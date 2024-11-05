@@ -1,3 +1,3 @@
-const currentProvider = "Fake"; // Options: 'JWT', 'Fake', 'LocalHost', 'Chatify'
+const currentProvider = "JWT"; // Options: 'JWT', 'Fake', 'LocalHost', 'Chatify'
 
 export default currentProvider;
