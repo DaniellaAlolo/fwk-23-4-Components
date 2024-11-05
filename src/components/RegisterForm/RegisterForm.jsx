@@ -11,6 +11,7 @@ const RegisterForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [consentGiven, setConsentGiven] = useState(false);
+  const [termsGiven, setTermsGiven] = useState(false);
   const [message, setMessage] = useState(""); // Använd en separat state för meddelanden
 
   const handleConsentChange = (e) => {
