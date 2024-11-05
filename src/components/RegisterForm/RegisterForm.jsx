@@ -5,6 +5,7 @@ import LoginSidebar from "../Login/LoginSidebar";
 import Btn from "../Btn/Btn";
 import { EmailAtom, PasswordAtom, UsernameAtom } from "../Atoms";
 import { GDPRConsent } from "../GDPRConsent";
+import { Terms } from "../Terms";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
@@ -22,6 +23,10 @@ const RegisterForm = () => {
     } else {
       setMessage("Du måste godkänna att vi lagrar dina uppgifter!");
     }
+  };
+
+  const handleTermsChange = (e) => {
+    setTermsGiven(e.target.checked);
   };
 
   const handleRegisterClick = async (e) => {
@@ -44,6 +49,10 @@ const RegisterForm = () => {
 
     if (!consentGiven) {
       setMessage("Du måste godkänna att vi lagrar dina uppgifter!");
+      return;
+    }
+    if (!termsGiven) {
+      setMessage("Du måste godkänna våra användarvillkor!");
       return;
     }
 
@@ -84,6 +93,7 @@ const RegisterForm = () => {
             isChecked={consentGiven}
             onConsentChange={handleConsentChange}
           />
+          <Terms isChecked={termsGiven} onTermsChange={handleTermsChange} />
           <Btn
             type="submit"
             text="Register"
@@ -94,7 +104,7 @@ const RegisterForm = () => {
               className={`${styles.message} ${message.includes("lyckades") ? styles.success : styles.error
                 }`}
             >
-              {message} {/* Använd message istället för message */}
+              {message}
             </p>
           )}
         </form>
