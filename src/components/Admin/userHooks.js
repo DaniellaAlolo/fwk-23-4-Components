@@ -17,7 +17,8 @@ export const useAddUser = () => {
             const data = await res.json();
             return data;
         } catch (err) {
-            setError(err);
+            setError(err.message);
+            return null; 
         }
     };
 
