@@ -14,7 +14,7 @@ const RegisterForm = () => {
   const [password, setPassword] = useState("");
   const [consentGiven, setConsentGiven] = useState(false);
   const [termsGiven, setTermsGiven] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaToken, setCaptchaToken] = useState(""); 
   const [message, setMessage] = useState(""); // Använd en separat state för meddelanden
 
   const handleConsentChange = (e) => {
@@ -101,7 +101,7 @@ const RegisterForm = () => {
             onConsentChange={handleConsentChange}
           />
           <Terms isChecked={termsGiven} onTermsChange={handleTermsChange} />
-          <Captcha captchaToken={captchaToken} onCaptchaInputChange={setCaptchaInput} />
+          <Captcha onCaptchaInputChange={setCaptchaToken} /> {/* Pass the correct function here */}
           <Btn
             type="submit"
             text="Register"
