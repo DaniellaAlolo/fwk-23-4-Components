@@ -1,4 +1,5 @@
 import styles from "../RegisterForm/RegisterForm.module.css";
+import React from "react";
 
 const Terms = ({ onTermsChange, isChecked }) => {
   const handleTermsChange = (e) => {
