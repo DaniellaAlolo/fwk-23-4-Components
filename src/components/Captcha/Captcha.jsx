@@ -7,7 +7,7 @@ const Captcha = ({ onCaptchaInputChange }) => {
     if (window.grecaptcha && !captchaRendered) {
       window.grecaptcha.enterprise.ready(() => {
         window.grecaptcha.enterprise.render("recaptcha-container", {
-          sitekey: "6Ld793cqAAAAACMbljOBJpqI1E3i-_U9pu8BdOnF",
+          sitekey: "6LectHcqAAAAAObYvabpFgmiNjfkuHTqEcI8Vjme",
           callback: onCaptchaInputChange,
         });
         setCaptchaRendered(true); 
