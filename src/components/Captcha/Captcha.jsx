@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Captcha = ({ captchaToken, onCaptchaInputChange }) => {
+const Captcha = ({ onCaptchaInputChange }) => {
+  const [captchaRendered, setCaptchaRendered] = useState(false); 
+
   useEffect(() => {
-    if (window.grecaptcha && !document.getElementById('recaptcha-container').hasChildNodes()) {
+    if (window.grecaptcha && !captchaRendered) {
       window.grecaptcha.enterprise.ready(() => {
         window.grecaptcha.enterprise.render("recaptcha-container", {
-          sitekey: "6Ld793cqAAAAACMbljOBJpqI1E3i-_U9pu8BdOnF", 
-          callback: onCaptchaInputChange, 
+          sitekey: "6Ld793cqAAAAACMbljOBJpqI1E3i-_U9pu8BdOnF",
+          callback: onCaptchaInputChange,
         });
+        setCaptchaRendered(true); 
       });
     }
-  }, [onCaptchaInputChange]);
+  }, [onCaptchaInputChange, captchaRendered]);
 
-  return (
-    <div id="recaptcha-container"></div> 
-  );
+  return <div id="recaptcha-container"></div>;
 };
 
 export default Captcha;
