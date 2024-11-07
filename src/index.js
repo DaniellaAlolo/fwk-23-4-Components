@@ -12,7 +12,11 @@ import { LoginForm } from "./components/Login";
 import { Sidebar } from "./components/Sidebar";
 import { TodoBoard } from "./components/Todo";
 import { ThemePicker } from "./components/ThemePicker";
-import { useTheme } from "./components/ThemePicker"
+import { useTheme } from "./components/ThemePicker";
+import { SettingsPanel } from "./components/SettingsPanel"
+import { Captcha } from "./components/Captcha"
+import { UserHandler } from "./components/Admin"
+import { ControlPanel } from "./components/Admin"
 
 export {
   Chat,
@@ -30,4 +34,8 @@ export {
   TodoBoard,
   ThemePicker,
   useTheme,
+  SettingsPanel,
+  Captcha,
+  UserHandler,
+  ControlPanel
 };
