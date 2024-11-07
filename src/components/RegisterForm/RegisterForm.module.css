@@ -1,15 +1,12 @@
 .form {
-    max-width: 400px;
-    width: 400px;
+    max-width: 500px;
+    width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    margin-bottom: 100px;
-    background-color: var(--secondary);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
 }
 
 .title {
@@ -18,10 +15,6 @@
     font-size: 24px;
     font-weight: 600;
     color: var(--primary);
-}
-
-.formGroup {
-    margin-bottom: 15px;
 }
 
 .label {
