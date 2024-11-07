@@ -6,6 +6,7 @@ import Btn from "../Btn/Btn";
 import { EmailAtom, PasswordAtom, UsernameAtom } from "../Atoms";
 import { GDPRConsent } from "../GDPRConsent";
 import { Terms } from "../Terms";
+import { Captcha } from "../Captcha";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
@@ -13,6 +14,7 @@ const RegisterForm = () => {
   const [password, setPassword] = useState("");
   const [consentGiven, setConsentGiven] = useState(false);
   const [termsGiven, setTermsGiven] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
   const [message, setMessage] = useState(""); // Använd en separat state för meddelanden
 
   const handleConsentChange = (e) => {
@@ -55,6 +57,10 @@ const RegisterForm = () => {
       setMessage("Du måste godkänna våra användarvillkor!");
       return;
     }
+    if (!captchaToken) {
+      setMessage("Du måste bevisa att du inte är en robot!");
+      return;
+    }
 
     try {
       const response = await fetch("http://localhost:3002/api/auth/register", {
@@ -66,6 +72,7 @@ const RegisterForm = () => {
           email,
           username,
           password,
+          captchaToken,
           role: "user"
         }),
       });
@@ -94,6 +101,7 @@ const RegisterForm = () => {
             onConsentChange={handleConsentChange}
           />
           <Terms isChecked={termsGiven} onTermsChange={handleTermsChange} />
+          <Captcha captchaToken={captchaToken} onCaptchaInputChange={setCaptchaInput} />
           <Btn
             type="submit"
             text="Register"

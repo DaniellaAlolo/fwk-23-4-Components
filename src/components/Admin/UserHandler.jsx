@@ -26,16 +26,18 @@ const UserHandler = () => {
                 <div className={styles.action}>
                     <h3>Add user</h3>
                     <form onSubmit={handleAddUser}>
-                        <UsernameAtom
-                            username={username}
-                            onUsernameChange={setUsername}
-                        />
-                        <EmailAtom email={email} onEmailChange={setEmail} />
-                        <PasswordAtom
-                            password={password}
-                            onPasswordChange={setPassword}
-                        />
-                        <RoleAtom role={role} onRoleChange={setRole} />
+                        <div className="inputWrapper">
+                            <UsernameAtom
+                                username={username}
+                                onUsernameChange={setUsername}
+                            />
+                            <EmailAtom email={email} onEmailChange={setEmail} />
+                            <PasswordAtom
+                                password={password}
+                                onPasswordChange={setPassword}
+                            />
+                            <RoleAtom role={role} onRoleChange={setRole} />
+                        </div>
                         <Btn
                             text="Add user"
                             backgroundColor={"lightGreen"}

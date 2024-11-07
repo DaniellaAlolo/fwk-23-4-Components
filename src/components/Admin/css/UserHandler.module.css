@@ -1,13 +1,10 @@
-.form {
-    max-width: 400px;
-    width: 400px;
+form {
+    width: 230px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--secondary);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
 .label {
@@ -39,11 +36,11 @@
 }
 .action {
     background-color: grey;
-    width: 280px;
+    width: 320px;
     padding: 1em;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
     height: fit-content;
 }
 .actionsWrapper{

@@ -1,0 +1,9 @@
+.captchaInput{
+    width: 80%;
+    height: 2em;
+}
+.captchaInputWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
