@@ -14,7 +14,6 @@ const RegisterForm = () => {
   const [password, setPassword] = useState("");
   const [consentGiven, setConsentGiven] = useState(false);
   const [termsGiven, setTermsGiven] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState("");
   const [message, setMessage] = useState(""); // Använd en separat state för meddelanden
 
   const handleConsentChange = (e) => {
@@ -56,10 +55,7 @@ const RegisterForm = () => {
     if (!termsGiven) {
       setMessage("Du måste godkänna våra användarvillkor!");
       return;
-    }
-    if (!captchaToken) {
-      setMessage("Du måste bevisa att du inte är en robot!");
-      return;
+
     }
 
     try {
