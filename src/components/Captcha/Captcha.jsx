@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Captcha = ({ onCaptchaInputChange }) => {
-  const [captchaRendered, setCaptchaRendered] = useState(false); 
 
-  useEffect(() => {
-    if (window.grecaptcha && !captchaRendered) {
-      window.grecaptcha.enterprise.ready(() => {
-        window.grecaptcha.enterprise.render("recaptcha-container", {
-          sitekey: "6LectHcqAAAAAObYvabpFgmiNjfkuHTqEcI8Vjme",
-          callback: onCaptchaInputChange,
-        });
-        setCaptchaRendered(true); 
-      });
-    }
-  }, [onCaptchaInputChange, captchaRendered]);
 
-  return <div id="recaptcha-container"></div>;
+  return (
+    <ReCAPTCHA
+      sitekey="6Le-Xn4qAAAAAKcKDIn7GyWZPc6_CHjn-rV5k-v1"
+    />
+  );
 };
 
 export default Captcha;
