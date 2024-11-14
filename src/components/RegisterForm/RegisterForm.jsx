@@ -68,7 +68,6 @@ const RegisterForm = () => {
           email,
           username,
           password,
-          captchaToken,
           role: "user"
         }),
       });
