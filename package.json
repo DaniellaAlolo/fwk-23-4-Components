@@ -10,7 +10,7 @@
     "README.md"
   ],
   "private": false,
-  "version": "4.0.8",
+  "version": "4.0.9",
   "scripts": {
     "dev": "vite",
     "build": "rollup -c",
